@@ -4,3 +4,8 @@ body {
 	font-family: "Helvetica", Times New Roman;
 	margin: 0 0 0 0;
 }
+
+.body h1 {
+	color: white;
+	font-size: 2vw;
+}
