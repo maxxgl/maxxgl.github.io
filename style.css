@@ -3,7 +3,10 @@ html, body {
 }
 
 body {
-    background-color: lightgrey;
+    background-image: url("Foggy-Lake1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right bottom;
 }
 
 .body {
