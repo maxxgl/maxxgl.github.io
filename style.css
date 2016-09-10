@@ -19,7 +19,8 @@ body {
 }
 
 .nameHeader {
-    font-family: "Helvetica Neue", Helvetica, Times New Roman;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Source Sans Pro", Helvetica, Times New Roman;
     display: table-cell;
     vertical-align: middle;
     padding-bottom: 20%;
