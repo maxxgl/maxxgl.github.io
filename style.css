@@ -38,8 +38,17 @@ body {
     -webkit-font-smoothing: antialiased;
     font-family: "Helvetica Neue", Helvetica, Times New Roman;
     position: absolute;
+    top: 0;
+    right: 5%;
     font-size: 1.75vw;
     
+}
+
+#info {
+    position: absolute;
+    bottom: 2%;
+    right: 0;
+    font-size: 1.75vw;
 }
 
 /*
