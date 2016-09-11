@@ -7,6 +7,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right bottom;
+    
 }
 
 .body {
@@ -20,7 +21,7 @@ body {
 
 .nameHeader {
     -webkit-font-smoothing: antialiased;
-    font-family: "Source Sans Pro", Helvetica, Times New Roman;
+    font-family: "Helvetica Neue", Helvetica, Times New Roman;
     display: table-cell;
     vertical-align: middle;
     padding-bottom: 20%;
@@ -33,12 +34,15 @@ body {
     text-align: left;
 }
 
-/*
 #links {
-        color: black;
-        text-align: right;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Helvetica Neue", Helvetica, Times New Roman;
+    position: absolute;
+    font-size: 1.75vw;
+    
 }
 
+/*
 h3 {
         margin: 0 10px;
         font-size: 2vw;
