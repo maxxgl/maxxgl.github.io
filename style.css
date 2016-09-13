@@ -1,34 +1,57 @@
+html, body {
+    height: 100%;
+}
+
 body {
-        background-color: black;
-        text-align: center;
-        font-family: "Helvetica Neue", Times New Roman;
-        margin: 0 0 0 0;
+    background-image: url("Foggy-Lake1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    
 }
 
 .body {
-        margin: 0 auto;
-        clear: both;
+    max-height: 100%;
+    min-height: 100%;
+    text-align: center;
+    display: table;
+    margin: 0 auto;
 }
 
 .nameHeader {
-        width: 40%;
-        padding-top: 10%;
-        margin: 1% 30% 1% 30%;
-        border-radius: 10px;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Helvetica Neue", Helvetica, Times New Roman;
+    display: table-cell;
+    vertical-align: middle;
+    padding-bottom: 20%;
 }
 
 .nameHeader h1 {
-        color: white;
-        font-size: 5vw;
-        margin: 1% 1% 2% 1%;
-        text-align: center;
+    color: black;
+    font-size: 4vw;
+    margin: 1% 1% 1% 1%;
+    text-align: left;
 }
 
 #links {
-        color: white;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Helvetica Neue", Helvetica, Times New Roman;
+    position: absolute;
+    top: 0;
+    right: 5%;
+    font-size: 1.75vw;   
 }
 
-h3 {
-        margin: 0 0;
-        font-size: 2vw;
+#info {
+    width: 200px;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+}
+
+#logo {
+    width: 300px;
+        position: absolute;
+        top: 2%;
+        left: 0;
 }
