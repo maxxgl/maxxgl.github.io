@@ -9,25 +9,16 @@ body {
 .nameHeader {
     -webkit-font-smoothing: antialiased;
     font-family: "Helvetica Neue", Helvetica, Times New Roman;
-    display: table-cell;
-    vertical-align: middle;
-    padding-bottom: 20%;
-}
-
-.nameHeader h1 {
-    color: black;
-    font-size: 4vw;
-    margin: 1% 1% 1% 1%;
-    text-align: left;
 }
 
 #links {
     -webkit-font-smoothing: antialiased;
     font-family: "Helvetica Neue", Helvetica, Times New Roman;
-    font-size: 1.75vw;   
 }
 
 #info {
+    -webkit-font-smoothing: antialiased;
+    font-family: "Helvetica Neue", Helvetica, Times New Roman;
 }
 
 #logo {
