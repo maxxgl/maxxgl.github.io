@@ -18,7 +18,13 @@ html, body {
 .head {
     display: table-cell;
     border-bottom: 2px solid black;
-    width: 33%;
+    width: 15%;
+}
+
+.name {
+    display: table-cell;
+    border-bottom: 2px solid black;
+    width: 70%;
 }
 
 #links {
@@ -37,18 +43,30 @@ html, body {
 
 #content {
     width: 98%;
+    height: 80%;
     -webkit-font-smoothing: antialiased;
     font-family: "Helvetica Neue", Helvetica, Times New Roman;
     text-align: center;
     display: table;
+    table-layout: fixed;
     margin: 1% 1%;
 }
 
 .col {
     display: table-cell;
     border: 2px solid black;
-    width 50%;
+    padding: 0 1%;
+    text-align: left;
 }
+
+.spacer {
+    display: table-cell;
+    width: 3%;
+}
+
+
+/*--------------------------------------------------------*/
+
 
 h4 {
     font-size: 1.75vw;
@@ -57,6 +75,7 @@ h4 {
 
 h2 {
     font-size: 2vw;
+    margin: 0 5% 0 5%;
 }
 
 h3 {
