@@ -1,34 +1,38 @@
-body {
-}
-
-.body {
-    text-align: center;
+#body {
     width: 100%;
 }
 
-.nameHeader {
+#header {
+    width: 100%;
     -webkit-font-smoothing: antialiased;
     font-family: "Helvetica Neue", Helvetica, Times New Roman;
-    display: table-cell;
-    vertical-align: middle;
-    padding-bottom: 20%;
+    text-align: center;
+    display: table;
+    margin: 0 0 0 0;
 }
 
-.nameHeader h1 {
-    color: black;
-    font-size: 4vw;
-    margin: 1% 1% 1% 1%;
-    text-align: left;
+.head {
+    display: table-cell;
+    border-bottom:4px solid black;
+    width: 33%;
 }
 
 #links {
+    width: 98%;
+    height: 90%;
     -webkit-font-smoothing: antialiased;
     font-family: "Helvetica Neue", Helvetica, Times New Roman;
-    font-size: 1.75vw;   
+    text-align: center;
+    display: table;
+    margin: 1% 1%;
 }
 
-#info {
+.linkHead {
+    display: table-cell;
+    border:1px solid black;
+    width: 33%;
 }
-
-#logo {
+.linkSpacer {
+    width: 100px;
+    display: table-cell;
 }
