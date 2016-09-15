@@ -13,8 +13,9 @@ html, body {
     font-family: "Helvetica Neue", Helvetica, Times New Roman;
     text-align: center;
     display: table;
-    margin: -1% 0 10% 0;
+    margin: -1% 0 5% 0;
     color: darkgrey;
+    background: #e6f2ff;
 }
 
 .head {
@@ -33,6 +34,9 @@ html, body {
 
 #main {
     height: 80%;
+    background: #e6f2ff;
+    border-radius: 1vw;
+    padding-top: 3%;
 }
 
 #links {
