@@ -17,13 +17,13 @@ html, body {
 
 .head {
     display: table-cell;
-    border-bottom: 2px solid black;
+    border-bottom: .25vw solid black;
     width: 15%;
 }
 
 .name {
     display: table-cell;
-    border-bottom: 2px solid black;
+    border-bottom: .25vw solid black;
     letter-spacing: .25vw;
     width: 70%;
 }
@@ -60,7 +60,7 @@ html, body {
 
 .colMain {
     display: table-cell;
-    border: 2px solid black;
+    border: .2vw solid black;
     padding: 0 1%;
     text-align: left;
 }
@@ -89,7 +89,7 @@ h2 {
 h3 {
     font-size: 2vw;
     padding: 2% 0 2% 0;
-    border-bottom: 2px solid black;
+    border-bottom: .25vw solid black;
 }
 
 a {
@@ -100,7 +100,7 @@ a {
 h1 {
     font-size: 3vw;
     margin-bottom: 0;
-    border-bottom: 4px solid black;
+    border-bottom: .4vw solid black;
 }
 
 p {
