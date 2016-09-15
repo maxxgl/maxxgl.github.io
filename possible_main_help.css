@@ -62,16 +62,23 @@ html, body {
 .col {
     display: table-cell;
     padding: 0 1%;
+    text-align: left;
 }
 
 .colMain {
     display: table-cell;
     padding: 0 1%;
+    text-align: left;
 }
 
 .spacer {
     display: table-cell;
     width: 3%;
+    background: black;
+    border-top: 5vw solid white;
+    border-bottom: 5vw solid white;
+    border-left: 1.3vw solid white;
+    border-right: 1.3vw solid white;
 }
 
 
