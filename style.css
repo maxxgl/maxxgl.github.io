@@ -23,11 +23,18 @@ html, body {
     width: 15%;
 }
 
+img {
+    width: 3vh;
+    margin: .5vh 2vw 0 2vw;
+    display: block;
+    opacity: .5;
+}
+
 .name {
     display: table-cell;
     border-bottom: .25vw solid darkgrey;
     letter-spacing: .25vw;
-    width: 70%;
+    width: 80%;
 /*    color: #9fbfdf;*/
     color: white;
 }
@@ -122,4 +129,5 @@ p {
     font-size: 2vw;
     margin: 2% 0;
 }
+
 
