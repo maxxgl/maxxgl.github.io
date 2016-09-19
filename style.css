@@ -15,7 +15,6 @@ html, body {
     display: table;
     margin: -1% 0 5% 0;
     color: darkgrey;
-    background: #e6f2ff;
 }
 
 .head {
@@ -29,12 +28,12 @@ html, body {
     border-bottom: .25vw solid darkgrey;
     letter-spacing: .25vw;
     width: 70%;
-    color: #9fbfdf;
+/*    color: #9fbfdf;*/
+    color: white;
 }
 
 #main {
     height: 80%;
-    background: #e6f2ff;
     border-radius: 1vw;
     padding-top: 3%;
 }
@@ -56,9 +55,9 @@ html, body {
 #content {
     width: 98%;
     height: 80%;
-    font-family: "Helvetica Neue", Helvetica, Times New Roman;
-    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial;
     display: table;
+    text-align: center;
     table-layout: fixed;
     margin: 0% 1%;
 }
@@ -97,7 +96,8 @@ h2 {
 h3 {
     font-size: 2vw;
     padding: 2% 0 2% 0;
-    border-top: .25vw solid #ffad33;
+/*    border-top: .25vw solid #ffad33;*/
+    border-top: .25vw solid darkgray;
     color: darkgrey;
     font-weight: normal;
 }
@@ -113,8 +113,13 @@ h1 {
     border-bottom: .4vw solid black;
 }
 
+h5 {
+    font-size: 2vw;
+    margin: 25% 0 3% 0;
+}
+
 p {
     font-size: 2vw;
     margin: 2% 0;
-    padding: 2% 0;
 }
+
