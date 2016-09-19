@@ -13,7 +13,7 @@ html, body {
     font-family: "Helvetica Neue", Helvetica, Times New Roman;
     text-align: center;
     display: table;
-    margin: -1% 0 5% 0;
+    margin: -1% 0 10% 0;
     color: darkgrey;
 }
 
@@ -23,26 +23,16 @@ html, body {
     width: 15%;
 }
 
-img {
-    width: 3vh;
-    margin: .5vh 2vw 0 2vw;
-    display: block;
-    opacity: .5;
-}
-
 .name {
     display: table-cell;
     border-bottom: .25vw solid darkgrey;
     letter-spacing: .25vw;
-    width: 80%;
-/*    color: #9fbfdf;*/
-    color: white;
+    width: 70%;
+    color: #9fbfdf;
 }
 
 #main {
     height: 80%;
-    border-radius: 1vw;
-    padding-top: 3%;
 }
 
 #links {
@@ -62,9 +52,9 @@ img {
 #content {
     width: 98%;
     height: 80%;
-    font-family: "Helvetica Neue", Helvetica, Arial;
-    display: table;
+    font-family: "Helvetica Neue", Helvetica, Times New Roman;
     text-align: center;
+    display: table;
     table-layout: fixed;
     margin: 0% 1%;
 }
@@ -72,16 +62,23 @@ img {
 .col {
     display: table-cell;
     padding: 0 1%;
+    text-align: left;
 }
 
 .colMain {
     display: table-cell;
     padding: 0 1%;
+    text-align: left;
 }
 
 .spacer {
     display: table-cell;
     width: 3%;
+    background: black;
+    border-top: 5vw solid white;
+    border-bottom: 5vw solid white;
+    border-left: 1.3vw solid white;
+    border-right: 1.3vw solid white;
 }
 
 
@@ -103,8 +100,7 @@ h2 {
 h3 {
     font-size: 2vw;
     padding: 2% 0 2% 0;
-/*    border-top: .25vw solid #ffad33;*/
-    border-top: .25vw solid darkgray;
+    border-top: .25vw solid #ffad33;
     color: darkgrey;
     font-weight: normal;
 }
@@ -120,14 +116,8 @@ h1 {
     border-bottom: .4vw solid black;
 }
 
-h5 {
-    font-size: 2vw;
-    margin: 25% 0 3% 0;
-}
-
 p {
     font-size: 2vw;
     margin: 2% 0;
+    padding: 2% 0;
 }
-
-
