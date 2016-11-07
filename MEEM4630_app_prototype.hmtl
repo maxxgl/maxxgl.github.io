@@ -22,10 +22,23 @@
             CoffeeMator
         </div>
         <div id="content">
+            <div class="cup"><a href="#"><img src="time.png"></a></div>
             <div class="portions" id="time">
-                <div class="label" id="timer">Time&nbsp&nbsp</div>
+                <div id="time">
+                    <div class="label" id="timer">Time and Days</div>
                     <input id="input-a" value="06:45&nbsp" data-default="20:48" style="text-align: right;">
+                </div>
+                <div id="days">
+                    <div type="button" class="btn btn-default">S</div>
+                    <div type="button" class="btn btn-default">M</div>
+                    <div type="button" class="btn btn-default">T</div>
+                    <div type="button" class="btn btn-default">W</div>
+                    <div type="button" class="btn btn-default">R</div>
+                    <div type="button" class="btn btn-default">F</div>
+                    <div type="button" class="btn btn-default">S</div>
+                </div>
             </div>
+            <div class="cup"><a href="#"><img src="hot-coffee-mug-outline.png"></a></div>
             <div class="portions" id="coffee">
                 <div class="label">Coffee&nbsp</div>
                 <div type="button" class="btn btn-default">Small</div>
@@ -49,6 +62,8 @@
         </div>
     </div>
 
+    <div id="reup">
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script> -->
