@@ -22,7 +22,28 @@
             CoffeeMator
         </div>
         <div id="content">
-            
+            <div class="portions" id="time">
+                <div class="label" id="timer">Time&nbsp&nbsp</div>
+                    <input id="input-a" value="06:45&nbsp" data-default="20:48" style="text-align: right;">
+            </div>
+            <div class="portions" id="coffee">
+                <div class="label">Coffee&nbsp</div>
+                <div type="button" class="btn btn-default">Small</div>
+                <div type="button" class="btn btn-default">Medium</div>
+                <div type="button" class="btn btn-default">Large</div>
+            </div>
+            <div class="portions" id="cream">
+                <div class="label">Cream&nbsp</div>
+                <div type="button" class="btn btn-default">Small</div>
+                <div type="button" class="btn btn-default">Medium</div>
+                <div type="button" class="btn btn-default">Large</div>
+            </div>
+            <div class="portions" id="sugar">
+                <div class="label">Sugar&nbsp&nbsp</div>
+                <div type="button" class="btn btn-default">Small</div>
+                <div type="button" class="btn btn-default">Medium</div>
+                <div type="button" class="btn btn-default">Large</div>
+            </div>
         </div>
         <div id="footer">
         </div>
