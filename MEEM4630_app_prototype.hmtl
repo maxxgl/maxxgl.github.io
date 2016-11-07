@@ -22,11 +22,11 @@
             CoffeeMator
         </div>
         <div id="content">
-            <div class="cup"><a href="#"><img src="time.png"></a></div>
+            <div class="cup"><a href="#"><img src="time.png" title="Coffee Timer"></a></div>
             <div class="portions" id="time">
                 <div id="time">
                     <div class="label" id="timer">Time and Days</div>
-                    <input id="input-a" value="06:45&nbsp" data-default="20:48" style="text-align: right;">
+                        <input id="input-a" value="06:45&nbsp" data-default="20:48" style="text-align: right;">
                 </div>
                 <div id="days">
                     <div type="button" class="btn btn-default">S</div>
@@ -38,31 +38,34 @@
                     <div type="button" class="btn btn-default">S</div>
                 </div>
             </div>
-            <div class="cup"><a href="#"><img src="hot-coffee-mug-outline.png"></a></div>
+            <div class="cup"><a href="#"><img src="hot-coffee-mug-outline.png" title="Choose Your Coffee" style="margin-top: 6px;"></a></div>
             <div class="portions" id="coffee">
                 <div class="label">Coffee&nbsp</div>
-                <div type="button" class="btn btn-default">Small</div>
-                <div type="button" class="btn btn-default">Medium</div>
-                <div type="button" class="btn btn-default">Large</div>
+                <div type="button" class="btn btn-info">Small</div>
+                <div type="button" class="btn btn-info">Medium</div>
+                <div type="button" class="btn btn-info">Large</div>
             </div>
             <div class="portions" id="cream">
                 <div class="label">Cream&nbsp</div>
-                <div type="button" class="btn btn-default">Small</div>
-                <div type="button" class="btn btn-default">Medium</div>
-                <div type="button" class="btn btn-default">Large</div>
+                <div type="button" class="btn btn-info">Small</div>
+                <div type="button" class="btn btn-info">Medium</div>
+                <div type="button" class="btn btn-info">Large</div>
             </div>
             <div class="portions" id="sugar">
                 <div class="label">Sugar&nbsp&nbsp</div>
-                <div type="button" class="btn btn-default">Small</div>
-                <div type="button" class="btn btn-default">Medium</div>
-                <div type="button" class="btn btn-default">Large</div>
+                <div type="button" class="btn btn-info">Small</div>
+                <div type="button" class="btn btn-info">Medium</div>
+                <div type="button" class="btn btn-info">Large</div>
+            </div>
+            <div class="cup"><a href="#"><img src="amazon.ico" title="Order More" style="width: 32px; height: auto; margin-top: 9px"></a></div>
+            <div class="portions" id="reup">
+                <div type="button" class="btn btn-primary">Coffee</div>
+                <div type="button" class="btn btn-primary">Cream</div>
+                <div type="button" class="btn btn-primary">Sugar</div>
             </div>
         </div>
         <div id="footer">
         </div>
-    </div>
-
-    <div id="reup">
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
