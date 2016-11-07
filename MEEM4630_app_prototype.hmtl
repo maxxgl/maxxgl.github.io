@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" type="text/css" href="MEEM4630_app_prototype.css">
+
+    <title>MEEM4630 App</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity=" sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+
+
+<body>
+    <div id="spacer" style="height: 20px;"></div>
+    <div id="phone" >
+        <div id="bar"></div>
+        <div id="header">
+            CoffeeMator
+        </div>
+        <div id="content">
+            <div class="cup"><a href="#"><img src="time.png" title="Coffee Timer"></a></div>
+            <div class="portions" id="time">
+                <div id="time">
+                    <div class="label" id="timer">Time and Days</div>
+                        <input id="input-a" value="06:45&nbsp" data-default="20:48" style="text-align: right;">
+                </div>
+                <div id="days">
+                    <div type="button" class="btn btn-default">S</div>
+                    <div type="button" class="btn btn-default">M</div>
+                    <div type="button" class="btn btn-default">T</div>
+                    <div type="button" class="btn btn-default">W</div>
+                    <div type="button" class="btn btn-default">R</div>
+                    <div type="button" class="btn btn-default">F</div>
+                    <div type="button" class="btn btn-default">S</div>
+                </div>
+            </div>
+            <div class="cup"><a href="#"><img src="hot-coffee-mug-outline.png" title="Choose Your Coffee" style="margin-top: 6px;"></a></div>
+            <div class="portions" id="coffee">
+                <div class="label">Coffee&nbsp</div>
+                <div type="button" class="btn btn-info">Small</div>
+                <div type="button" class="btn btn-info">Medium</div>
+                <div type="button" class="btn btn-info">Large</div>
+            </div>
+            <div class="portions" id="cream">
+                <div class="label">Cream&nbsp</div>
+                <div type="button" class="btn btn-info">Small</div>
+                <div type="button" class="btn btn-info">Medium</div>
+                <div type="button" class="btn btn-info">Large</div>
+            </div>
+            <div class="portions" id="sugar">
+                <div class="label">Sugar&nbsp&nbsp</div>
+                <div type="button" class="btn btn-info">Small</div>
+                <div type="button" class="btn btn-info">Medium</div>
+                <div type="button" class="btn btn-info">Large</div>
+            </div>
+            <div class="cup"><a href="#"><img src="amazon.ico" title="Order More" style="width: 32px; height: auto; margin-top: 9px"></a></div>
+            <div class="portions" id="reup">
+                <div type="button" class="btn btn-primary">Coffee</div>
+                <div type="button" class="btn btn-primary">Cream</div>
+                <div type="button" class="btn btn-primary">Sugar</div>
+            </div>
+        </div>
+        <div id="footer">
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script> -->
+
+    <!-- use for deployment -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+
+</html>
