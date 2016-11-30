@@ -1,2 +1,2 @@
-var thing = document.getElementByID("phone")
-thing.style.color = red
+/* MEEM4630 App js*/
+
