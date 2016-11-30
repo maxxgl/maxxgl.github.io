@@ -65,7 +65,7 @@ html, body {
     font-weight: normal 0666;
 }
 
-input {
+input[type="time"] {
   height: 28px;
   width: 100px;
   color: black 0666;
