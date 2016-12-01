@@ -1,14 +1,19 @@
 /* MEEM4630 App js*/
 
-document.cookie = "username=John Doe"
-
-$("#content").hide();
-document.getElementById("content").innerHTML='<object type="text/html" data="homeContent.html"></object>';     
-
-var content = document.getElementById("content")
-var t = document.createTextNode("Hello World")
-
-$("#spacer").click(function(){
-    $("#content").show("slow");
-});
+$("#content").hide()
+var visited = document.cookie
+if (visited == "true") {
+	document.getElementById("content").innerHTML='<object type="text/html" data="homeContent.html"></object>';
+	$("#content").show("slow")
+} else {
+	$("#content").show()
+	$("#thing").show("slow")
+	$("#spacer").click(function(){
+		$("#thing").slideUp(500)
+		$("#content").hide()
+		document.getElementById("content").innerHTML='<object type="text/html" data="homeContent.html"></object>';
+		$("#content").slideDown("slow")
+	})
+}
+document.cookie = true
 
