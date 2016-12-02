@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" type="text/css" href="brew.css">
+    <title>MEEM4630 App</title>
+</head>
+
+<body>
+    <div id="spacer" style="height: 20px;"></div>
+    <div id="phone" >
+        <div class="bar"></div>
+        <div class="header"><a href="app.html">CoffeeMator</a></div>
+        <div id="contentBody">
+            <div id="ranges">
+                <div class="options">Coffee Options</div>
+                <div class="labels">Size: <output id="sizeOut">12</output> oz</div>
+                <input type="range" id="sizeIn" value="12" min="0" max="24" name="size" oninput="sizeOut.value = sizeIn.value">
+                <div class="labels">Cream: <output id="creamOut">3</output> tbsp</div>
+                <input type="range" id="creamIn" value="3" min="0" max="6" name="cream" oninput="creamOut.value = creamIn.value">
+                <div class="labels">Sugar: <output id="sugarOut">3</output> lumps</div>
+                <input type="range" id="sugarIn" value="3" min="0" max="6" name="sugar" oninput="sugarOut.value = sugarIn.value">
+            </div>
+            <div id="load" style="display: none;">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
+                <div class="labels" id="status" style="font-size: 20pt; font-weight: 200;">Making Coffee</div>
+            </div>
+
+            <div id="maker"><button id="noSubmit" onclick='make()'>Make Coffee</button>
+            </div>
+
+        </div>
+        <div class="header">
+            <button onclick="location.href='app.html';" style="height: 20px; width: 60px;">Home</button>
+        </div>
+        <div class="bar"></div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="app-script.js"></script>
+
+</body>
+
+</html>
