@@ -1,0 +1,22 @@
+#nav {
+    font-family: "Helvetica Neue", Helvetica, Arial;   
+    -webkit-font-smoothing: antialiased;
+    color: #E4E5E8;
+    width: 100%;
+    /*margin-left: auto;
+    margin-right: auto;*/
+    border-spacing: 10px;
+    display: table;
+    table-layout: fixed;
+}
+
+.navButton {
+    display: table-cell;
+    border-radius: 10px;
+	background-color: #301E19;
+	width: 2%;
+	height: 70px;
+	border: 10px;
+	text-align: center;
+	vertical-align: middle;
+}

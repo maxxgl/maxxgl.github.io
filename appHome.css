@@ -8,6 +8,9 @@ html, body {
 }
 
 #phone {
+    font-family: "Helvetica Neue", Helvetica, Arial;   
+    -webkit-font-smoothing: antialiased;
+    color: #E4E5E8;
     margin-left: auto;
     margin-right: auto;
     border-radius: 15px;
@@ -22,16 +25,13 @@ html, body {
 }
 
 .header {
-    font-family: "Helvetica Neue", Helvetica, Arial;
+    letter-spacing: 2px;
     background-color: #301E19;
-    color: #E4E5E8;
     height: 28px;
     width: 250px;
     text-align: center;
     width: 100%;
     font-size: 20px;
-    letter-spacing: 2px;
-    -webkit-font-smoothing: antialiased;
 }
 
 #contentBody {
@@ -43,20 +43,40 @@ html, body {
     margin-right: auto
 }
 
-input[type="time"] {
-  height: 28px;
-  width: 100px;
-  color: black 0666;
-  border-radius: 3px;
-  border: 1px solid transparent;
-  border-bottom: 1px solid #DDD;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px #FFF, 0 1px 0 #FFF;
-  position: relative;
-  left: 85px;
+#helper {
+    text-align: center;
+    width: 200px;
+    height: 240px;
+    background-color: #301E19;
+    color: #E4E5E8;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 85px;
 }
 
+#helperText {
+    margin: 10px 0 25px 0;
+}
 
 a {
     color: inherit;
     text-decoration: inherit;
 }
+
+large {
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+button {
+    color: #E4E5E8;
+    cursor: pointer;
+    background-color: #3E885B;
+    border: none;
+    height: 25px;
+    width: 100px;
+    font-weight: bold;
+}
+

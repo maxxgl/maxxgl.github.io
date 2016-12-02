@@ -4,15 +4,17 @@ $("#content").hide()
 var visited = document.cookie
 if (visited == "true") {
 	document.getElementById("content").innerHTML='<object type="text/html" data="homeContent.html"></object>';
-	$("#content").show("slow")
+	$("#content").slideDown("slow")
 } else {
 	$("#content").show()
-	$("#thing").show("slow")
-	$("#spacer").click(function(){
-		$("#thing").slideUp(500)
-		$("#content").hide()
-		document.getElementById("content").innerHTML='<object type="text/html" data="homeContent.html"></object>';
-		$("#content").slideDown("slow")
+	$("#helper").fadeIn("1500")
+	$("#helperButton").click(function() {
+		$("#helper").slideUp("slow", function() {
+			$("#content").hide()
+			document.getElementById("content").innerHTML='<object type="text/html" data="homeContent.html"></object>';
+			$("#content").slideDown("slow")
+		})
+		
 	})
 }
 document.cookie = true
