@@ -19,7 +19,13 @@ document.cookie = true
 $("#new").click(function() {
 	$.get("entry.html", function (data) {
 		$("#schedule").append(data)
-		$(".entry").fadeIn("slow");
+		$(".entry").fadeIn("slow")
 	})
 })
+
+$('#scheduler').submit(function() {
+    var values = $(this).serialize();
+	localStorage.setItem(0, JSON.stringify(values));
+    window.location.href = "appHome.html"
+});
 

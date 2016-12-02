@@ -15,36 +15,34 @@
         <div class="bar"></div>
         <div class="header"><a href="appHome.html">CoffeeMator</a></div>
         <div id="contentBody">
-            <form id="scheduler">
+            
+            <form id="scheduler" action="appHome.html">
                 <div id="ranges">
                     <div class="options">Coffee Options</div>
-                    <div class="labels">Size: <output id="sizeOut">12</output> oz
-                        <input type="range" id="sizeIn" value="12" min="0" max="24" oninput="sizeOut.value = sizeIn.value">
-                    </div>
-                    <div class="labels">Cream: <output id="creamOut">3</output> tbsp
-                        <input type="range" id="creamIn" value="3" min="0" max="6" oninput="creamOut.value = creamIn.value">
-                    </div>
-                    <div class="labels">Sugar: <output id="sugarOut">3</output> lumps
-                        <input type="range" id="sugarIn" value="3" min="0" max="6" oninput="sugarOut.value = sugarIn.value">
-                    </div>
+                    <div class="labels">Size: <output id="sizeOut">12</output> oz</div>
+                    <input type="range" id="sizeIn" value="12" min="0" max="24" name="size" oninput="sizeOut.value = sizeIn.value">
+                    <div class="labels">Cream: <output id="creamOut">3</output> tbsp</div>
+                    <input type="range" id="creamIn" value="3" min="0" max="6" name="cream" oninput="creamOut.value = creamIn.value">
+                    <div class="labels">Sugar: <output id="sugarOut">3</output> lumps</div>
+                    <input type="range" id="sugarIn" value="3" min="0" max="6" name="sugar" oninput="sugarOut.value = sugarIn.value">
                 </div>
 
                 <div id="times">
                     <div class="options">Timing Options</div>
                     <div id="days"><span style="letter-spacing: normal; font-weight: 500; font-size: 14pt;">Days: </span>&nbspU M T W R F S</div>
-                    <input type="checkbox" class="dayBox" value="Su">
-                    <input type="checkbox" class="dayBox" value="M">
-                    <input type="checkbox" class="dayBox" value="T">
-                    <input type="checkbox" class="dayBox" value="W">
-                    <input type="checkbox" class="dayBox" value="R">
-                    <input type="checkbox" class="dayBox" value="F">
-                    <input type="checkbox" class="dayBox" value="St">
+                    <input type="checkbox" class="dayBox" name="Su" value="Su">
+                    <input type="checkbox" class="dayBox" name="M" value="M">
+                    <input type="checkbox" class="dayBox" name="T" value="T">
+                    <input type="checkbox" class="dayBox" name="W" value="W">
+                    <input type="checkbox" class="dayBox" name="R" value="R">
+                    <input type="checkbox" class="dayBox" name="F" value="F">
+                    <input type="checkbox" class="dayBox" name="St" value="St">
                     <div id="time">
                         Time:
                         <input type="time" name="usr_time" style="float: right; margin-right: 100px;">
                     </div>
                 </div>
-                
+
                 <div id="formSubmit">
                     <button type="submit" id="submitter">Submit Schedule</button>
                 </div>
