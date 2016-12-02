@@ -28,7 +28,7 @@ $('#scheduler').submit(function() {
 	values.timeIn = $("#timeIn").val()
 
 	localStorage.setItem(localStorage.length + 1, JSON.stringify(values))
-    window.location.href = "appHome.html"
+    window.location.href = "app.html"
 })
 
 $.get("entry.html", function (data) {
@@ -66,6 +66,6 @@ function done() {
 
 function out() {
 	$("#load").fadeOut("slow", function() {
-	location.href='appHome.html', 3000})
+	location.href='app.html', 3000})
 }
 
