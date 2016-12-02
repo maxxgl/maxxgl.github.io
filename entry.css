@@ -3,6 +3,12 @@
     font-size: 10pt;
     width: 100%;
     height: 70px;
+    display: table;
+    border-radius: 10px;
+    background-color: #301E19;
+    border: 10px;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .coffeeType {
@@ -29,9 +35,4 @@
 .coffeeTimeCell {
     display: table-cell;
     width: 1000px;
-}
-
-.navButton:hover {
-    background-color: #301E19;
-    cursor: auto;
 }
