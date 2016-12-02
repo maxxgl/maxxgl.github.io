@@ -1,7 +1,8 @@
-.entry {
+#entry {
     margin: 10px auto 10px auto;
     font-size: 10pt;
     width: 100%;
+    height: 70px;
 }
 
 .coffeeType {
@@ -19,14 +20,18 @@
 }
 
 .coffeeTime {
-    width: 265;
-    height: 35;
+    height: 35px;
     margin: 0 auto 0 auto;
     line-height: 30px;
     display: table;
 }
 
 .coffeeTimeCell {
-    width: 1000px;
     display: table-cell;
+    width: 1000px;
+}
+
+.navButton:hover {
+    background-color: #301E19;
+    cursor: auto;
 }

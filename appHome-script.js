@@ -31,9 +31,9 @@ $('#scheduler').submit(function() {
     window.location.href = "appHome.html"
 })
 
-	$.get("entry.html", function (data) {
-		for (var i = localStorage.length - 1; i >= 0; i--) {
-		var values = JSON.parse(localStorage.getItem( localStorage.key( i ) ))
+$.get("entry.html", function (data) {
+	for (var i = localStorage.length - 1; i >= 0; i--) {
+		var values = JSON.parse(localStorage.getItem(localStorage.key( i )))
 		$("#list").prepend(data)
 		$("#size").prepend(values.size)
 		$("#cream").prepend(values.cream)
@@ -49,3 +49,7 @@ $('#scheduler').submit(function() {
 		$(".entry").fadeIn("slow")
 	}
 })
+
+
+
+
