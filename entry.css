@@ -1,0 +1,32 @@
+.entry {
+    margin: 10px auto 10px auto;
+    font-size: 10pt;
+    width: 100%;
+}
+
+.coffeeType {
+    width: 265px;
+    height: 34px;
+    margin: 0 auto 0 auto;
+    border-bottom: solid;
+    border-width: 1px;
+    line-height: 30px;
+    display: table;
+}
+
+.coffeeTypeCell {
+    display: table-cell;
+}
+
+.coffeeTime {
+    width: 265;
+    height: 35;
+    margin: 0 auto 0 auto;
+    line-height: 30px;
+    display: table;
+}
+
+.coffeeTimeCell {
+    width: 1000px;
+    display: table-cell;
+}

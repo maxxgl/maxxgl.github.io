@@ -81,7 +81,7 @@ button {
 }
 
 #homeContent {
-    width: 100%;
+    width: auto;
     font-family: "Helvetica Neue", Helvetica, Arial;   
     -webkit-font-smoothing: antialiased;
     color: #E4E5E8;
@@ -116,9 +116,10 @@ img {
 }
 
 #schedule {
-    width: 100%;
+    width: 290px;
     height: 334px;
     padding-top: 5px;
+    margin: 0 auto 0 auto;
 }
 
 #scheduleHeader {

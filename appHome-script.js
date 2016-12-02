@@ -11,11 +11,16 @@ if (visited == "true") {
 		})
 	})
 }
-// document.cookie = true
+document.cookie = true
+
 
 localStorage.setItem("size", "L");
 
-$('#schedule').load('entry.html')
 
-//('<object type="text/html" data="entry.html" style="height: 70px; width: 310px;"></object>')
+$("#new").click(function() {
+	$.get("entry.html", function (data) {
+		$("#schedule").append(data)
+	})
+	$(".entry").fadeIn("slow");
+})
 
