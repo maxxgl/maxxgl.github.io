@@ -31,17 +31,13 @@ $('#scheduler').submit(function() {
     window.location.href = "appHome.html"
 })
 
-
-for (var i = 0; i < localStorage.length; i++) {
-	var values = JSON.parse(localStorage.getItem( localStorage.key( i ) ))
-
 	$.get("entry.html", function (data) {
-		$("#schedule").append(data)
-		data.attr('id', "this")
+		for (var i = localStorage.length - 1; i >= 0; i--) {
+		var values = JSON.parse(localStorage.getItem( localStorage.key( i ) ))
+		$("#list").prepend(data)
 		$("#size").prepend(values.size)
 		$("#cream").prepend(values.cream)
 		$("#sugar").prepend(values.sugar)
-
 		$(".entry").fadeIn("slow")
-	})
-}
+	}
+})
