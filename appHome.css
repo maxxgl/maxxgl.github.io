@@ -34,6 +34,10 @@ html, body {
     font-size: 20px;
 }
 
+#content {
+    height: 455px;
+}
+
 #contentBody {
     width: 310px;
     height: 455px;
