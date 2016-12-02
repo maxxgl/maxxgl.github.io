@@ -54,7 +54,7 @@ html, body {
 
 #times {
     width: 290px;
-    height: 215px;
+    height: 142px;
     margin: 5px auto 0 auto;
     background-color: #301E19;
     border-radius: 10px;
@@ -69,7 +69,7 @@ html, body {
 #days {
     letter-spacing: 3px;
     text-align: left;
-    text-indent: 10px;
+    text-indent: 14px;
 }
 
 .sliders {
@@ -80,6 +80,32 @@ html, body {
     font-size: 14pt;
     font-weight: 500;
     padding: 2px;
+}
+
+#time {
+    margin-top: 14px;
+    width: 100%;
+    float: left;
+    text-indent: 14px;
+    font-weight: 500;
+    font-size: 14pt;
+    text-align: left;
+}
+
+#formSubmit {
+    width: 100%;
+}
+
+#submitter {
+    color: #E4E5E8;
+    cursor: pointer;
+    background-color: #3E885B;
+    border: none;
+    height: 40px;
+    width: 175px;
+    font-weight: bold;
+    font-size: 12pt;
+    margin: 18px 0 0 67px;
 }
 
 input[type=range] {

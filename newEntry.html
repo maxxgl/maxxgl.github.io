@@ -31,7 +31,7 @@
 
                 <div id="times">
                     <div class="options">Timing Options</div>
-                    <div id="days">Days: U M T W R F S</div>
+                    <div id="days"><span style="letter-spacing: normal; font-weight: 500; font-size: 14pt;">Days: </span>&nbspU M T W R F S</div>
                     <input type="checkbox" class="dayBox" value="Su">
                     <input type="checkbox" class="dayBox" value="M">
                     <input type="checkbox" class="dayBox" value="T">
@@ -39,6 +39,14 @@
                     <input type="checkbox" class="dayBox" value="R">
                     <input type="checkbox" class="dayBox" value="F">
                     <input type="checkbox" class="dayBox" value="St">
+                    <div id="time">
+                        Time:
+                        <input type="time" name="usr_time" style="float: right; margin-right: 100px;">
+                    </div>
+                </div>
+                
+                <div id="formSubmit">
+                    <button type="submit" id="submitter">Submit Schedule</button>
                 </div>
             </form>
         </div>
