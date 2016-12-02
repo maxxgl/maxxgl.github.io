@@ -36,16 +36,42 @@ img {
 #schedule {
 	width: 100%;
 	height: 334px;
-	background-color: #301E19;
-    border-radius: 10px;
     padding-top: 5px;
 }
 
 #scheduleHeader {
     font-size: 16pt;
     text-align: center;
-    margin: 0 auto 0 auto;
+    margin: 0 auto 5px auto;
     width: 66%;
     border-bottom: solid;
     border-width: 2px;
 }
+
+.entry {
+	width: 275px;
+	height: 60px;
+	background-color: #301E19;
+	margin: 10px;
+	border-radius: 10px;
+}
+
+.coffeeType {
+	width: 265px;
+	height: 30px;
+	margin: 0 auto 0 auto;
+	border-bottom: solid;
+    border-width: 1px;
+    line-height: 30px;
+}
+
+.coffeeTime {
+	width: 265;
+	height: 30;
+	margin: 0 auto 0 auto;
+    line-height: 30px;
+}
+
+
+
+
