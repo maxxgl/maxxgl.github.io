@@ -4,7 +4,7 @@ $("#content").hide()
 var visited = document.cookie
 if (visited == "true") {
 	document.getElementById("content").innerHTML='<object type="text/html" data="homeContent.html"></object>';
-	$("#content").slideDown("slow")
+	$("#content").fadeIn("slow")
 } else {
 	$("#content").show()
 	$("#helper").fadeIn("1500")
@@ -12,9 +12,8 @@ if (visited == "true") {
 		$("#helper").slideUp("slow", function() {
 			$("#content").hide()
 			document.getElementById("content").innerHTML='<object type="text/html" data="homeContent.html"></object>';
-			$("#content").slideDown("slow")
+			$("#content").fadeIn("slow")
 		})
-		
 	})
 }
 document.cookie = true

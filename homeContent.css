@@ -1,10 +1,19 @@
-#nav {
+body {
+	width: 100%;
+    margin: 0 0 10px 0;
+}
+
+#homeContent {
+	width: 100%;
+    margin: 0;
+    padding: 0;
     font-family: "Helvetica Neue", Helvetica, Arial;   
     -webkit-font-smoothing: antialiased;
     color: #E4E5E8;
+}
+
+#nav {
     width: 100%;
-    /*margin-left: auto;
-    margin-right: auto;*/
     border-spacing: 10px;
     display: table;
     table-layout: fixed;
@@ -14,9 +23,23 @@
     display: table-cell;
     border-radius: 10px;
 	background-color: #301E19;
-	width: 2%;
 	height: 70px;
 	border: 10px;
 	text-align: center;
 	vertical-align: middle;
+	cursor: pointer;
+	transition: .5s;
+}
+
+.navButton:hover {
+    background-color: #3E885B;
+}
+
+img {
+	width: 50%;
+}
+
+large {
+    font-size: 16pt;
+    font-weight: bold;
 }
