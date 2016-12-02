@@ -33,10 +33,12 @@ $('#scheduler').submit(function() {
 
 
 for (var i = 0; i < localStorage.length; i++) {
-	var data = JSON.parse(localStorage.getItem(i));
-	alert(data.cream)
+	var values = JSON.parse(localStorage.getItem( localStorage.key( i ) ))
 	$.get("entry.html", function (data) {
 		$("#schedule").append(data)
+		$("#size").prepend(values.size)
+		$("#cream").prepend(values.cream)
+		$("#sugar").prepend(values.sugar)
 		$(".entry").fadeIn("slow")
 	})
 }
