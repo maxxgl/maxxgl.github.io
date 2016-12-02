@@ -27,18 +27,21 @@ $('#scheduler').submit(function() {
 	values.St = $("#St").prop('checked')
 	values.timeIn = $("#timeIn").val()
 
-	localStorage.setItem(localStorage.length, JSON.stringify(values))
+	localStorage.setItem(localStorage.length + 1, JSON.stringify(values))
     window.location.href = "appHome.html"
 })
 
 
 for (var i = 0; i < localStorage.length; i++) {
 	var values = JSON.parse(localStorage.getItem( localStorage.key( i ) ))
+
 	$.get("entry.html", function (data) {
 		$("#schedule").append(data)
+		data.attr('id', "this")
 		$("#size").prepend(values.size)
 		$("#cream").prepend(values.cream)
 		$("#sugar").prepend(values.sugar)
+
 		$(".entry").fadeIn("slow")
 	})
 }
