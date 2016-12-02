@@ -13,9 +13,8 @@ if (visited == "true") {
 }
 document.cookie = true
 
-
-localStorage.setItem("size", "L");
-
+// localStorage.setItem(i, JSON.stringify(["L","1 tbsp","2 lumps"]));
+// JSON.parse(localStorage.getItem(i));
 
 $("#new").click(function() {
 	$.get("entry.html", function (data) {
