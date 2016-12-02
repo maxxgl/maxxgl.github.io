@@ -117,9 +117,10 @@ img {
 
 #schedule {
     width: 290px;
-    height: 334px;
+    height: 335px;
     padding-top: 5px;
     margin: 0 auto 0 auto;
+    overflow: auto;
 }
 
 #scheduleHeader {

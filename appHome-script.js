@@ -20,7 +20,7 @@ localStorage.setItem("size", "L");
 $("#new").click(function() {
 	$.get("entry.html", function (data) {
 		$("#schedule").append(data)
+		$(".entry").fadeIn("slow");
 	})
-	$(".entry").fadeIn("slow");
 })
 
