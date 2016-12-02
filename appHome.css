@@ -34,10 +34,6 @@ html, body {
     font-size: 20px;
 }
 
-#content {
-    height: 455px;
-}
-
 #contentBody {
     width: 310px;
     height: 455px;
@@ -84,3 +80,52 @@ button {
     font-weight: bold;
 }
 
+#homeContent {
+    width: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial;   
+    -webkit-font-smoothing: antialiased;
+    color: #E4E5E8;
+}
+
+#nav {
+    width: 100%;
+    border-spacing: 10px;
+    display: table;
+    table-layout: fixed;
+    margin: 0 0 10px 0;
+}
+
+.navButton {
+    display: table-cell;
+    border-radius: 10px;
+    background-color: #301E19;
+    height: 70px;
+    border: 10px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.navButton:hover {
+    background-color: #3E885B;
+}
+
+img {
+    width: 50%;
+}
+
+#schedule {
+    width: 100%;
+    height: 334px;
+    padding-top: 5px;
+}
+
+#scheduleHeader {
+    font-size: 16pt;
+    text-align: center;
+    margin: 0 auto 5px auto;
+    width: 66%;
+    border-bottom: solid;
+    border-width: 2px;
+}
