@@ -50,6 +50,22 @@ $.get("entry.html", function (data) {
 	}
 })
 
+function make() {
+	$("#ranges").fadeOut("slow")
+	$("#times").fadeOut("slow")
+	$("#maker").fadeOut("slow", function() {
+		$("#load").fadeIn("slow")
+		var thing = setTimeout(done, 7000)
+	})
+}
 
+function done() {
+	$("#status").html('Done')
+	setTimeout(out, 1500)
+}
 
+function out() {
+	$("#load").fadeOut("slow", function() {
+	location.href='appHome.html', 3000})
+}
 
