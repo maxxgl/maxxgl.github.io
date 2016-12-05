@@ -69,3 +69,22 @@ function out() {
 	location.href='app.html', 3000})
 }
 
+function clock() {
+    var d = new Date()
+    $('#clock').html(d.getHours() + ":" + ("00" + d.getMinutes()).slice(-2))
+
+    setInterval(function () {
+      clock();
+    }, 1000);
+}
+clock()
+
+function help() {
+	$("#newI").toggle()
+	$("#brewI").toggle()
+	$("#orderI").toggle()
+	
+	$("#newH").toggle()
+	$("#brewH").toggle()
+	$("#orderH").toggle()
+}

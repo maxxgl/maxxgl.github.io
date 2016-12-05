@@ -22,9 +22,12 @@
             </div>
             <div id="homeContent" style="display: none";>
                 <div id="nav">
-                    <div class="navButton" onclick="location.href='newEntry.html';" id="new"><img src="Calendar-52.png" alt="Schedule" /></div>
-                    <div class="navButton" onclick="location.href='brew.html';" id="brew"><img src="hot-coffee-mug-outline.png" alt="Brew" /></div>
-                    <div class="navButton" onclick="window.open('https://www.amazon.com/gp/registry/wishlist/3TUUKFLJW8J0E/ref=cm_wl_list_o_0?');" id="order"><img src="Amazon.png" alt="Amazon" /></div>
+                    <div class="navButton" onclick="location.href='newEntry.html';" id="new"><img id="newI" src="Calendar-52.png" alt="Schedule" />
+                        <span id="newH" style="display: none">Brew Schedule</span></div>
+                    <div class="navButton" onclick="location.href='brew.html';" id="brew"><img id="brewI" src="hot-coffee-mug-outline.png" alt="Brew" />
+                        <span id="brewH" style="display: none">Brew Now</span></div>
+                    <div class="navButton" onclick="window.open('https://www.amazon.com/gp/registry/wishlist/3TUUKFLJW8J0E/ref=cm_wl_list_o_0?');" id="order"><img id="orderI" src="Amazon.png" alt="Amazon" />
+                        <span id="orderH" style="display: none">Order Supplies</span></div>
                 </div>
 
                 <div id="schedule">
@@ -34,7 +37,9 @@
             </div>
         </div>
         <div class="header">
+            <span id="clock" style="font-size: 14px; ">&nbsp</span>
             <button onclick="location.href='app.html';" style="height: 20px; width: 60px;">Home</button>
+            <button onclick="help()" style="height: 20px; width: 60px;">Help</button>
         </div>
         <div class="bar"></div>
     </div>
