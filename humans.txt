@@ -3,13 +3,13 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Maxx Lehmann -- Developer -- mglehman@mtu.edu
 
 # THANKS
 
-    <name>
+    Everybody
 
 # TECHNOLOGY COLOPHON
 
     CSS3, HTML5
-    Apache Server Configs, jQuery, Modernizr, Normalize.css
+    jQuery, PureCSS
