@@ -1,5 +1,6 @@
 html, body {
     height: 99%;
+    -webkit-font-smoothing: antialiased;
 }
 
 #body {
@@ -9,7 +10,6 @@ html, body {
 
 #header {
     width: 100%;
-    -webkit-font-smoothing: antialiased;
     font-family: "Helvetica Neue", Helvetica, Times New Roman;
     text-align: center;
     display: table;
