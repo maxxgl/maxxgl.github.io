@@ -32,13 +32,13 @@ ctx.lineWidth=2;
 ctx.strokeStyle = '#1b1b1b'
 ctx.stroke();
 
-// ctx.beginPath()
-// for (var i = 1; i > 0; i-=0.2) {
-//     ctx.arc(335,350,330*i,0,2*pi)
-// }
-// ctx.lineWidth=2;
-// ctx.strokeStyle = '#1b1b1b'
-// ctx.stroke();
+ctx.beginPath()
+for (var i = 1; i > 0; i-=0.2) {
+    ctx.arc(335,350,330*i,0,2*pi)
+}
+ctx.lineWidth=2;
+ctx.strokeStyle = '#1b1b1b'
+ctx.stroke();
 
 
 for (var i = 0; i < points.length; i+=2) {
@@ -50,15 +50,15 @@ for (var i = 0; i < points.length; i+=2) {
     }
     ctx.lineWidth=2;
     ctx.lineJoin='round'
-    // ctx.fill()
+    ctx.fill()
     ctx.stroke();
 }
 
 for (var i = 0; i < starsX.length; i++) {
     ctx.beginPath()
     ctx.arc(starsX[i] + 10,starsY[i] + 110,2,0,2*pi)
-    ctx.strokeStyle = 'maroon'
-    ctx.fillStyle = 'maroon'
+    ctx.strokeStyle = (i < 11 ? '#cc3300' : '#880000')
+    ctx.fillStyle = (i < 11 ? '#cc3300' : '#880000')
     ctx.fill()
     ctx.stroke();
 }
