@@ -1,6 +1,6 @@
-document.body.style.backgroundColor = '#000026'
-var w = c.width = window.innerWidth,
-    h = c.height = window.innerHeight,
+document.body.style.backgroundColor = 'lightgrey'
+var w = c.width = $('#canvasWrapper').innerWidth(),
+    h = c.height = $('#canvasWrapper').innerHeight(),
     ctx = c.getContext('2d')
 
 var points = [
@@ -29,7 +29,7 @@ ctx.beginPath();
 for (var i = 0; i < 2*pi; i+=pi/2/4) {
     ctx.arc(335,350,330,0 + i, pi/4/2 + i)
     ctx.arc(335,350,330,pi + pi/4/2 + i, pi + pi/4/2*2 + i)
-    ctx.strokeStyle = '#222'
+    ctx.strokeStyle = 'black'
 }
 // ctx.fillStyle = '#003'
 // ctx.fill()
@@ -39,18 +39,18 @@ ctx.beginPath()
 for (var i = 0.8; i > 0; i-=0.2) {
     ctx.arc(335,350,330*i,0,2*pi)
 }
-ctx.strokeStyle = '#222'
+ctx.strokeStyle = 'black'
 ctx.stroke();
 
 
 for (var i = 0; i < points.length; i+=2) {
     ctx.beginPath();
-    ctx.strokeStyle = (i < 3 ? 'goldenrod' : '#785807')
+    ctx.strokeStyle = (i < 3 ? '#ddd' : '#ddd')
     ctx.moveTo(points[0]+10, points[0]+110)
     for (var j = 0; j < points[i].length; j++) {
         ctx.lineTo(points[i][j] + 10, points[i + 1][j] + 110)
     }
-    ctx.fillStyle = '#000026'
+    ctx.fillStyle = 'black'
     ctx.fill()
     ctx.stroke();
 }

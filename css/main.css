@@ -11,7 +11,7 @@
    ========================================================================== */
 
 html {
-    color: #222;
+    color: tan;
     font-size: 1em;
     line-height: 1.4;
     font-family: "Helvetica Neue", Helvetica, Arial;
@@ -65,21 +65,41 @@ video {
    Author's custom styles
    ========================================================================== */
 
+html, body {
+  height: 100%;
+  background: linear-gradient(to bottom right, cyan, magenta, yellow);
+}
 
+#infoWrapper {
+  float: left;
+  height: 100%;
+  width: 45%;
+  color: black;
+}
 
+#canvasWrapper {
+  float: left;
+  min-width: 55%;
+  height: 100%;
+}
 
+#info {
+  margin: 2em;
+  padding: 2em 6em;
+}
 
+#name {
+  font-size: 2em;
+}
 
+.header {
+  font-size: 1.25em; 
+}
 
-
-
-
-
-
-
-
-
-
+.text {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
 
 /* ==========================================================================
    Helper classes
