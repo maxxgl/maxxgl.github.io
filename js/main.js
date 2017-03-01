@@ -24,40 +24,44 @@ var starsY = [279,292,226,365,289,297,314,303,204,296,260,127,107,129,178,129,12
 var pi = Math.PI
 ctx.lineJoin='round'
 ctx.lineWidth=2;
+ctx.strokeStyle = 'black'
 
 ctx.beginPath();
-for (var i = 0; i < 2*pi; i+=pi/2/4) {
-    ctx.arc(335,350,330,0 + i, pi/4/2 + i)
-    ctx.arc(335,350,330,pi + pi/4/2 + i, pi + pi/4/2*2 + i)
-    ctx.strokeStyle = 'black'
+for (var i = 1*pi/16; i < 7*pi; i+=3*pi/4) {
+    ctx.arc(350,350,330, i, i + 3*pi/8)
+    ctx.arc(350,350,345, i + 3*pi/8, i + 3*pi/8*2)
 }
-// ctx.fillStyle = '#003'
-// ctx.fill()
+ctx.stroke();
+
+ctx.beginPath();
+for (var i = 0; i < 2*pi; i+=pi/8) {
+    ctx.arc(350,350,330, i, pi/4 + i)
+    ctx.arc(350,350,330,pi + pi/8 + i, pi + pi/8 + i)
+}
 ctx.stroke();
 
 ctx.beginPath()
 for (var i = 0.8; i > 0; i-=0.2) {
-    ctx.arc(335,350,330*i,0,2*pi)
+    ctx.arc(350,350,330*i,0,2*pi)
 }
-ctx.strokeStyle = 'black'
 ctx.stroke();
 
 
 for (var i = 0; i < points.length; i+=2) {
     ctx.beginPath();
     ctx.strokeStyle = (i < 3 ? '#ddd' : '#ddd')
-    ctx.moveTo(points[0]+10, points[0]+110)
+    ctx.moveTo(points[0]+25, points[0]+110)
     for (var j = 0; j < points[i].length; j++) {
-        ctx.lineTo(points[i][j] + 10, points[i + 1][j] + 110)
+        ctx.lineTo(points[i][j] + 25, points[i + 1][j] + 110)
     }
     ctx.fillStyle = 'black'
     ctx.fill()
-    ctx.stroke();
+    ctx.stroke()
 }
 
 for (var i = 0; i < starsX.length; i++) {
     ctx.beginPath()
-    ctx.arc(starsX[i] + 10,starsY[i] + 110,1.5,0,2*pi)
+    ctx.arc(starsX[i] + 25,starsY[i] + 110,1.5,0,2*pi)
     ctx.strokeStyle = ('lightgoldenrodyellow')
     ctx.fillStyle = ('lightgoldenrodyellow')
     ctx.fill()
