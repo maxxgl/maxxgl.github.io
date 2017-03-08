@@ -1,4 +1,4 @@
-document.body.style.backgroundColor = 'lightgrey'
+document.body.style.backgroundColor = '#002'
 var w = c.width = $('#canvasWrapper').innerWidth(),
     h = c.height = $('#canvasWrapper').innerHeight(),
     ctx = c.getContext('2d')
@@ -24,32 +24,25 @@ var starsY = [279,292,226,365,289,297,314,303,204,296,260,127,107,129,178,129,12
 var pi = Math.PI
 ctx.lineJoin='round'
 ctx.lineWidth=2;
-ctx.strokeStyle = 'black'
+ctx.strokeStyle = 'grey'
 
 ctx.beginPath();
 for (var i = 1*pi/16; i < 7*pi; i+=3*pi/4) {
     ctx.arc(350,350,330, i, i + 3*pi/8)
     ctx.arc(350,350,345, i + 3*pi/8, i + 3*pi/8*2)
 }
-ctx.stroke();
-
-ctx.beginPath();
+ctx.moveTo(680,350)
 for (var i = 0; i < 2*pi; i+=pi/8) {
     ctx.arc(350,350,330, i, pi/4 + i)
     ctx.arc(350,350,330,pi + pi/8 + i, pi + pi/8 + i)
 }
-ctx.stroke();
-
-ctx.beginPath()
-for (var i = 0.8; i > 0; i-=0.2) {
-    ctx.arc(350,350,330*i,0,2*pi)
-}
+ctx.arc(350,350,230,0,2*pi)
 ctx.stroke();
 
 
 for (var i = 0; i < points.length; i+=2) {
     ctx.beginPath();
-    ctx.strokeStyle = (i < 3 ? '#ddd' : '#ddd')
+    ctx.strokeStyle = (i < 3 ? 'skyblue' : 'darkgrey')
     ctx.moveTo(points[0]+25, points[0]+110)
     for (var j = 0; j < points[i].length; j++) {
         ctx.lineTo(points[i][j] + 25, points[i + 1][j] + 110)
