@@ -32,7 +32,7 @@ var starsY = [279,292,226,365,289,297,314,303,204,296,260,127,107,129,178,129,12
 var pi = Math.PI
 ctx.lineJoin='round'
 ctx.lineWidth=2;
-ctx.strokeStyle = 'grey'
+ctx.strokeStyle = 'dimgrey'
 
 ctx.beginPath();
 for (var i = 1*pi/16; i < 7*pi; i+=3*pi/4) {
@@ -40,17 +40,17 @@ for (var i = 1*pi/16; i < 7*pi; i+=3*pi/4) {
     ctx.arc(350,350,345, i + 3*pi/8, i + 3*pi/8*2)
 }
 ctx.moveTo(680,350)
+var ci = 330
 for (var i = 0; i < 2*pi; i+=pi/8) {
-    ctx.arc(350,350,330, i, pi/4 + i)
-    ctx.arc(350,350,330,pi + pi/8 + i, pi + pi/8 + i)
+    ctx.arc(350,350,ci, i, pi/4 + i)
+    ci = (ci == 330 ? 265 : 330)
+    ctx.arc(350,350,ci,pi + pi/8 + i, pi + pi/8 + i)
 }
-ctx.arc(350,350,230,0,2*pi)
-ctx.stroke();
-
+ctx.stroke()
 
 for (var i = 0; i < points.length; i+=2) {
     ctx.beginPath();
-    ctx.strokeStyle = (i < 3 ? '#07a' : 'darkgrey')
+    ctx.strokeStyle = (i < 3 ? '#024' : 'grey')
     ctx.moveTo(points[0]+25, points[0]+110)
     for (var j = 0; j < points[i].length; j++) {
         ctx.lineTo(points[i][j] + 25, points[i + 1][j] + 110)
@@ -60,11 +60,25 @@ for (var i = 0; i < points.length; i+=2) {
     ctx.stroke()
 }
 
-ctx.strokeStyle = ('#f9ed93')
-ctx.fillStyle = ('#f9ed93')
+ctx.strokeStyle = 'white'
+ctx.fillStyle = 'white'
 for (var i = 0; i < starsX.length; i++) {
     ctx.beginPath()
     ctx.arc(starsX[i] + 25,starsY[i] + 110,1.5,0,2*pi)
-    // ctx.fill()
+    ctx.fill()
     ctx.stroke();
 }
+
+ang = 0
+angle = ang
+x = points[i][j] - 325
+y = points[i + 1][j] - 239
+xPrime = Math.cos(angle)*x + Math.sin(angle)*y + 350
+yPrime = -Math.sin(angle)*x + Math.cos(angle)*y + 349
+ctx.lineTo(xPrime, yPrime)
+ang+= 0.001
+ctx.clearRect(0, 0, c.width, c.height);
+
+setInterval(axisRotation, 200)
+
+
