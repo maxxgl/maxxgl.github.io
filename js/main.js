@@ -45,12 +45,14 @@ for (var i = 1*pi/16; i < 7*pi; i+=3*pi/4) {
     ctx.arc(350,350,330, i, i + 3*pi/8)
     ctx.arc(350,350,345, i + 3*pi/8, i + 3*pi/8*2)
 }
+ctx.stroke()
+ctx.beginPath()
 ctx.moveTo(680,350)
 var ci = 330
 for (var i = 0; i < 2*pi; i+=pi/8) {
-    ctx.arc(350,350,ci, i, pi/4 + i)
+    ctx.arc(350,350,ci, i, i)
     ci = (ci == 330 ? 250 : 330)
-    ctx.arc(350,350,ci,pi + pi/8 + i, pi + pi/8 + i)
+    ctx.arc(350,350,ci, i + pi + pi/8, i + pi + pi/8)
 }
 ctx.stroke()
 
