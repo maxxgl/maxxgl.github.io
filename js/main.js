@@ -17,8 +17,8 @@ var points = [
     [233,204,191,165,149],
     [314,282,268,282,266,229,266,288,289,288,319,315,325,332,345,353,364],
     [107,129,178,129,126,152,126, 73, 55, 73, 83,107,152,152,143,138,122],
-    [573,560,538,533,534,515,505,487,449,440,421,402,386,377,373,357,338,326,307,286,265,242,231,219,200,186,174,158,141,135,120,135,152,172,188,202,204,220,232,241,243,247,247,245,251,252,249,251,270,277,287,296,309,316,326,334,348,359,372,387,388,401,468,470,502,517,550,568],
-    [297,316,339,347,364,348,339,337,339,352,352,365,361,361,377,376,380,383,376,365,336,336,331,329,318,316,307,302,294,292,296,291,284,281,286,288,266,252,244,232,226,243,256,268,270,274,280,283,285,288,291,293,293,292,289,298,300,297,300,295,303,309,309,311,311,307,305,305],
+    [573,560,538,533,534,515,505,487,449,440,421,402,386,377,373,357,338,326,307,286,265,242,231,219,200,186,174,158,141,135,120,135,152,172,188,202,204,220,232,241,243,247,247,245,251,252,249,251,270,277,287,296,309,316,326,334,348,359,372,387,388,401,435,468,470,502,517,550,568],
+    [297,316,339,347,364,348,339,337,339,352,352,365,361,361,377,376,380,383,376,365,336,336,331,329,318,316,307,302,294,292,296,291,284,281,286,288,266,252,244,232,226,243,256,268,270,274,280,283,285,288,291,293,293,292,289,298,300,297,300,295,303,309,309,309,311,311,307,305,305],
     [265,258,253,251,219,202],
     [336,317,295,283,288,288],
     [449,449,449,445],
@@ -80,6 +80,7 @@ var w = cf.width = $('#canvasWrapper').innerWidth(),
     ctf = cf.getContext('2d')
 var outlineColor = 0x50
 var colorStep = 0x1
+var carIndex = Math.floor(Math.random() * 69)
 ctf.lineJoin='round'
 ctf.lineWidth=2;
 
@@ -95,7 +96,7 @@ function breathe() {
         xPrime = Math.cos(angle)*x + Math.sin(angle)*y + 350
         yPrime = -Math.sin(angle)*x + Math.cos(angle)*y + 349
         ctf.beginPath()
-        if (Math.random() < 0.1) {
+        if (Math.random() < 0.05) {
             fieldTwinkle[i] = (fieldTwinkle[i]*3 + Math.random())/4
         }
         ctf.arc(xPrime, yPrime,fieldTwinkle[i],0,2*pi)
@@ -106,12 +107,28 @@ function breathe() {
 
     ctf.strokeStyle = 'grey'
     for (var i = 4; i < points.length; i+=2) {
-        ctf.beginPath();
+        ctf.beginPath()
         for (var j = 0; j < points[i].length; j++) {
             ctf.lineTo(points[i][j] + 25, points[i + 1][j] + 110)
         }
         ctf.stroke()
     }
+
+    car = Math.floor(carIndex)
+    ctf.strokeStyle = 'lightgrey'
+    ctf.beginPath()
+    for (var j = car; j < car + 4; j++) {
+        ctf.lineTo(points[12][j] + 25, points[13][j] + 110)
+    }
+     ctf.stroke()
+    ctf.strokeStyle = 'white'
+    ctf.beginPath()
+    for (var j = car + 1; j < car + 3; j++) {
+        ctf.lineTo(points[12][j] + 25, points[13][j] + 110)
+    }
+    ctf.stroke()
+    carIndex = carIndex + 0.1
+    if (carIndex > 68) {carIndex = 0}
 
     ctf.strokeStyle = 'rgb(0,' + Math.floor(outlineColor/2) +',' + outlineColor + ')'
     outlineColor = outlineColor + colorStep
