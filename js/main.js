@@ -42,18 +42,13 @@ for (var i = 0; i < fieldTwinkle.length; i++) {fieldTwinkle[i] = 0.5}
 var pi = Math.PI
 ctx.lineJoin='round'
 ctx.lineWidth=2;
-ctx.fillStyle = document.body.style.backgroundColor
 ctx.strokeStyle = '#444'
 
 ctx.beginPath();
-// ctx.strokeStyle = '#024'
 for (var i = 1*pi/16; i < 7*pi; i+=3*pi/4) {
     ctx.arc(350,350,330, i, i + 3*pi/8)
     ctx.arc(350,350,345, i + 3*pi/8, i + 3*pi/8*2)
 }
-ctx.stroke()
-
-ctx.beginPath()
 ctx.moveTo(670,350)
 var ci = 325
 for (var i = 0; i < 2*pi; i+=pi/8) {
@@ -62,14 +57,6 @@ for (var i = 0; i < 2*pi; i+=pi/8) {
     ctx.arc(350,350,ci, i + pi + pi/8, i + pi + pi/8)
 }
 ctx.stroke()
-
-for (var i = 0; i < 3; i+=2) {
-    ctx.beginPath();
-    for (var j = 0; j < points[i].length; j++) {
-        ctx.lineTo(points[i][j] + 25, points[i + 1][j] + 110)
-    }
-    ctx.fill()
-}
 
 
 // Breathing ***************************************************
@@ -87,9 +74,22 @@ ctf.lineWidth=2;
 
 angle = Math.random()*2*pi
 function breathe() {
+    ctf.clearRect(0, 0, cf.width, cf.height);
+    ctf.strokeStyle = 'rgb(0,' + Math.floor(outlineColor/2) +',' + outlineColor + ')'
+    outlineColor = outlineColor + colorStep
+    if (outlineColor > 0x70 || outlineColor < 0x30) {colorStep = colorStep * -0x1}
+    for (var i = 0; i < 3; i+=2) {
+        ctf.beginPath();
+        for (var j = 0; j < points[i].length; j++) {
+            ctf.lineTo(points[i][j] + 25, points[i + 1][j] + 110)
+        }
+        ctf.fillStyle = document.body.style.backgroundColor
+        ctf.fill()
+        ctf.stroke()
+    }
+
     ctf.strokeStyle = '#ccc'
     ctf.fillStyle = '#fff'
-    ctf.clearRect(0, 0, cf.width, cf.height);
     for (var i = 0; i < fieldX.length; i++) {
         x = fieldX[i] - 325
         y = fieldY[i] - 239
@@ -113,33 +113,15 @@ function breathe() {
         }
         ctf.stroke()
     }
-
     car = Math.floor(carIndex)
     ctf.strokeStyle = 'lightgrey'
-    ctf.beginPath()
     for (var j = car; j < car + 4; j++) {
+        if (!(j % 2)) {ctf.beginPath()}
         ctf.lineTo(points[12][j] + 25, points[13][j] + 110)
+        if (j % 2) {ctf.stroke()}
     }
-     ctf.stroke()
-    ctf.strokeStyle = 'white'
-    ctf.beginPath()
-    for (var j = car + 1; j < car + 3; j++) {
-        ctf.lineTo(points[12][j] + 25, points[13][j] + 110)
-    }
-    ctf.stroke()
     carIndex = carIndex + 0.1
     if (carIndex > 68) {carIndex = 0}
-
-    ctf.strokeStyle = 'rgb(0,' + Math.floor(outlineColor/2) +',' + outlineColor + ')'
-    outlineColor = outlineColor + colorStep
-    if (outlineColor > 0x68 || outlineColor < 0x38) {colorStep = colorStep * -0x1}
-    for (var i = 0; i < 3; i+=2) {
-        ctf.beginPath();
-        for (var j = 0; j < points[i].length; j++) {
-            ctf.lineTo(points[i][j] + 25, points[i + 1][j] + 110)
-        }
-        ctf.stroke()
-    }
 
     ctf.strokeStyle = '#fff'
     ctf.fillStyle = '#ddd'
