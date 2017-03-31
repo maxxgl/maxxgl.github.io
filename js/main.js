@@ -113,14 +113,28 @@ function breathe() {
         }
         ctf.stroke()
     }
+
     car = Math.floor(carIndex)
-    ctf.strokeStyle = 'lightgrey'
-    for (var j = car; j < car + 4; j++) {
-        if (!(j % 2)) {ctf.beginPath()}
+    ctf.beginPath()
+    var cc = 0xdd
+    for (var j = car; j < car + 16; j++) {
+        ctf.beginPath()
+        ctf.strokeStyle = 'rgb(' + cc +',' + cc +',' + cc + ')'
+        cc = cc - 8
         ctf.lineTo(points[12][j] + 25, points[13][j] + 110)
-        if (j % 2) {ctf.stroke()}
+        ctf.lineTo(points[12][j + 1] + 25, points[13][j + 1] + 110)
+        ctf.stroke()
     }
-    carIndex = carIndex + 0.1
+    cc = 0xdd
+    for (var j = car; j > car - 16; j--) {
+        ctf.beginPath()
+        ctf.strokeStyle = 'rgb(' + cc +',' + cc +',' + cc + ')'
+        cc = cc - 8
+        ctf.lineTo(points[12][j] + 25, points[13][j] + 110)
+        ctf.lineTo(points[12][j - 1] + 25, points[13][j - 1] + 110)
+        ctf.stroke()
+    }
+    carIndex = carIndex + 0.05
     if (carIndex > 68) {carIndex = 0}
 
     ctf.strokeStyle = '#fff'
