@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Maxx Lehmann -- Developer -- mglehman@mtu.edu
+
+# THANKS
+
+    Everybody
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    jQuery, PureCSS
