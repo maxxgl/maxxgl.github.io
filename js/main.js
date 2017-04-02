@@ -36,7 +36,7 @@ var fieldTwinkle = new Array(275)
 for (var i = 0; i < fieldTwinkle.length; i++) {fieldTwinkle[i] = 0.5}
 
 var pi = Math.PI
-var scaler, ctf, ch, cw, fiddy
+var scaler, ctf, ch, cw, fiddy, twofive
 carIndex = Math.floor(Math.random() * 69)
 var points = new Array()
 for (var i = 0; i < originalPoints.length; i++) {
@@ -44,51 +44,27 @@ for (var i = 0; i < originalPoints.length; i++) {
 }
 
 function background() {
-    height = $('#canvasWrapper').innerWidth()
-    width = $('#canvasWrapper').innerHeight()
-    var d = (width <= height ? width : height)
+    height = $('#canvasWrapper').innerWidth() *.9
+    width = $('#canvasWrapper').innerHeight() *.9
+    d = (width <= height ? width : height)
 
-    var c = document.getElementById('mainCanvas')
-    var w = c.width = d,
-        h = c.height = d,
-        ctx = c.getContext('2d')
-    ctx.lineJoin='round'
-    ctx.strokeStyle = '#444'
+    var cf = document.getElementById('mainCanvas')
+    cw = cf.width = d
+    ch = cf.height = d
+    ctf = cf.getContext('2d')
+    outlineColor = 0x50
+    colorStep = 0x1
+    ctf.lineJoin='round'
 
     scaler = d/700
     fiddy = 350 * scaler
-    var twofive = 325 * scaler
-
-    ctx.clearRect(0, 0, c.width, c.height);
-    ctx.lineWidth=2 * scaler;
-    ctx.beginPath();
-    for (var i = 1*pi/16; i < 7*pi; i+=3*pi/4) {
-        ctx.arc(fiddy,fiddy,330 * scaler, i, i + 3*pi/8)
-        ctx.arc(fiddy,fiddy,345 * scaler, i + 3*pi/8, i + 3*pi/8*2)
-    }
-    ctx.moveTo(670 * scaler,fiddy)
-    var ci = twofive
-    for (var i = 0; i < 2*pi; i+=pi/8) {
-        ctx.arc(fiddy,fiddy,ci, i, i)
-        ci = (ci == twofive ? 240 * scaler : twofive)
-        ctx.arc(fiddy,fiddy,ci, i + pi + pi/8, i + pi + pi/8)
-    }
-    ctx.stroke()
-
+    twofive = 325 * scaler
 
     for (var i = 0; i < originalPoints.length; i++) {
         for (var j = 0; j < originalPoints[i].length; j++) {
             points[i][j] = Math.round(originalPoints[i][j] * scaler)
         }
     }
-    var cf = document.getElementById('fieldCanvas')
-    cw = cf.width = $('#canvasWrapper').innerWidth()
-    ch = cf.height = $('#canvasWrapper').innerHeight()
-    ctf = cf.getContext('2d')
-    outlineColor = 0x50
-    colorStep = 0x1
-    ctf.lineJoin='round'
-    ctf.lineWidth=2;
     breathe()
 }
 window.onresize = function() {background()}
@@ -98,6 +74,22 @@ window.onresize = function() {background()}
 angle = Math.random()*2*pi
 function breathe() {
     ctf.clearRect(0, 0, cw, ch);
+    ctf.lineWidth=2 * scaler;
+    ctf.beginPath();
+    ctf.strokeStyle = 'dimgrey'
+    for (var i = 1*pi/16; i < 7*pi; i+=3*pi/4) {
+        ctf.arc(fiddy,fiddy,330 * scaler, i, i + 3*pi/8)
+        ctf.arc(fiddy,fiddy,345 * scaler, i + 3*pi/8, i + 3*pi/8*2)
+    }
+    ctf.moveTo(670 * scaler,fiddy)
+    var ci = twofive
+    for (var i = 0; i < 2*pi; i+=pi/8) {
+        ctf.arc(fiddy,fiddy,ci, i, i)
+        ci = (ci == twofive ? 240 * scaler : twofive)
+        ctf.arc(fiddy,fiddy,ci, i + pi + pi/8, i + pi + pi/8)
+    }
+    ctf.stroke()
+
     ctf.strokeStyle = 'rgb(0,' + Math.floor(outlineColor/2) +',' + outlineColor + ')'
     outlineColor = outlineColor + colorStep
     if (outlineColor > 0x70 || outlineColor < 0x30) {colorStep = colorStep * -0x1}
