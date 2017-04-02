@@ -44,14 +44,18 @@ for (var i = 0; i < originalPoints.length; i++) {
 }
 
 function background() {
+    height = $('#canvasWrapper').innerWidth()
+    width = $('#canvasWrapper').innerHeight()
+    var d = (width <= height ? width : height)
+
     var c = document.getElementById('mainCanvas')
-    var w = c.width = $('#canvasWrapper').innerWidth(),
-        h = c.height = $('#canvasWrapper').innerHeight(),
+    var w = c.width = d,
+        h = c.height = d,
         ctx = c.getContext('2d')
     ctx.lineJoin='round'
     ctx.strokeStyle = '#444'
 
-    scaler = (w <= h ? w/702 : h/699)
+    scaler = d/700
     fiddy = 350 * scaler
     var twofive = 325 * scaler
 
