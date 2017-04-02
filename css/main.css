@@ -71,7 +71,7 @@ html, body {
 
 #infoWrapper {
   float: right;
-  width: 45%;
+  max-width: 45%;
   height: 100%;
   color: darkgrey;
   display: flex;
@@ -93,17 +93,22 @@ html, body {
   justify-content: center;
 }
 
-#name {
-  font-size: 2em;
+#info {
+  width: 60%;
 }
 
-.header {
-  font-size: 1.25em;
+#name {
+  font-size: 3em;
 }
 
 .text {
-  padding-top: 1em;
-  padding-bottom: 1em;
+  font-size: 1.5em;
+  padding: 1em 0;
+}
+
+#contact {
+  font-size: 1em;
+  padding-top: 2em;
 }
 
 /* ==========================================================================
