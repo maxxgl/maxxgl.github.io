@@ -11,10 +11,9 @@
    ========================================================================== */
 
 html {
-    color: tan;
     font-size: 1em;
     line-height: 1.4;
-    font-family: "Helvetica Neue", Helvetica, Arial;
+    font-family: 'Yantramanav', sans-serif;
 }
 
 /*
@@ -72,20 +71,18 @@ html, body {
 
 #infoWrapper {
   float: left;
-  height: 100%;
   width: 45%;
-  color: lightgrey;
-  display: none;
+  color: darkgrey;
 }
 
 #canvasWrapper {
-  float: left;
-  /* min-width: 55%; */
-  width: 100%;
+  float: right;
+  width: 55%;
   height: 100%;
+  position: relative;
 }
 
-#fieldCanvas {
+.canvases {
   position: absolute;
   left: 0;
   top: 0;

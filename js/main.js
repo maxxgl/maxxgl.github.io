@@ -76,7 +76,6 @@ function background() {
         for (var j = 0; j < originalPoints[i].length; j++) {
             points[i][j] = Math.round(originalPoints[i][j] * scaler)
         }
-        console.log(points[i].toString())
     }
     var cf = document.getElementById('fieldCanvas')
     cw = cf.width = $('#canvasWrapper').innerWidth()
