@@ -132,25 +132,25 @@ function breathe() {
     car = Math.floor(carIndex)
     ctf.beginPath()
     var cc = 0xdd
-    for (var j = car; j < car + 16; j++) {
+    for (var j = car; j < car + 8; j++) {
         ctf.beginPath()
         ctf.strokeStyle = 'rgb(' + cc +',' + cc +',' + cc + ')'
-        cc = cc - 8
+        cc = cc - 16
         ctf.lineTo(points[12][j], points[13][j])
         ctf.lineTo(points[12][j + 1], points[13][j + 1])
         ctf.stroke()
     }
     cc = 0xdd
-    for (var j = car; j > car - 16; j--) {
+    for (var j = car; j > car - 8; j--) {
         ctf.beginPath()
         ctf.strokeStyle = 'rgb(' + cc +',' + cc +',' + cc + ')'
-        cc = cc - 8
+        cc = cc - 16
         ctf.lineTo(points[12][j], points[13][j])
         ctf.lineTo(points[12][j - 1], points[13][j - 1])
         ctf.stroke()
     }
-    carIndex = carIndex + 0.05
-    if (carIndex > 68) {carIndex = 0}
+    carIndex = carIndex + 0.1
+    if (carIndex > 76) {carIndex = -8}
 
     ctf.strokeStyle = '#fff'
     ctf.fillStyle = '#ddd'
