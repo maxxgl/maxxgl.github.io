@@ -97,7 +97,7 @@ function breathe() {
     ctf.stroke()
 
     ctf.strokeStyle = 'rgb(0,' + Math.floor(outlineColor/2) +',' + outlineColor + ')'
-    ctf.lineWidth= 3 * scaler;
+    ctf.lineWidth= 2 * scaler;
     outlineColor = outlineColor + colorStep
     if (outlineColor > 0x90 || outlineColor < 0x50) {colorStep = colorStep * -0x1}
     for (var i = 0; i < 3; i+=2) {
