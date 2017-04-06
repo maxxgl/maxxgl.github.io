@@ -52,7 +52,7 @@ function background() {
     cw = cf.width = d
     ch = cf.height = d
     ctf = cf.getContext('2d')
-    outlineColor = 0x50
+    outlineColor = 0x70
     colorStep = 0x1
     ctf.lineJoin='round'
 
@@ -92,7 +92,7 @@ function breathe() {
 
     ctf.strokeStyle = 'rgb(0,' + Math.floor(outlineColor/2) +',' + outlineColor + ')'
     outlineColor = outlineColor + colorStep
-    if (outlineColor > 0x70 || outlineColor < 0x30) {colorStep = colorStep * -0x1}
+    if (outlineColor > 0x90 || outlineColor < 0x50) {colorStep = colorStep * -0x1}
     for (var i = 0; i < 3; i+=2) {
         ctf.beginPath();
         for (var j = 0; j < points[i].length; j++) {
@@ -132,19 +132,19 @@ function breathe() {
     car = Math.floor(carIndex)
     ctf.beginPath()
     var cc = 0xdd
-    for (var j = car; j < car + 8; j++) {
+    for (var j = car; j < car + 16; j++) {
         ctf.beginPath()
         ctf.strokeStyle = 'rgb(' + cc +',' + cc +',' + cc + ')'
-        cc = cc - 16
+        cc = cc - 7
         ctf.lineTo(points[12][j], points[13][j])
         ctf.lineTo(points[12][j + 1], points[13][j + 1])
         ctf.stroke()
     }
     cc = 0xdd
-    for (var j = car; j > car - 8; j--) {
+    for (var j = car; j > car - 16; j--) {
         ctf.beginPath()
         ctf.strokeStyle = 'rgb(' + cc +',' + cc +',' + cc + ')'
-        cc = cc - 16
+        cc = cc - 7
         ctf.lineTo(points[12][j], points[13][j])
         ctf.lineTo(points[12][j - 1], points[13][j - 1])
         ctf.stroke()
@@ -166,4 +166,4 @@ function breathe() {
     }
 }
 background()
-setInterval(breathe, 125)
+setInterval(breathe, 100)
