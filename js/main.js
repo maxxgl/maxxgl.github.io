@@ -52,7 +52,7 @@ function background() {
     cw = cf.width = d
     ch = cf.height = d
     ctf = cf.getContext('2d')
-    outlineColor = 0x50
+    outlineColor = 0x70
     colorStep = 0x1
     ctf.lineJoin='round'
 
@@ -74,9 +74,9 @@ window.onresize = function() {background()}
 angle = Math.random()*2*pi
 function breathe() {
     ctf.clearRect(0, 0, cw, ch);
-    ctf.lineWidth=2 * scaler;
-    ctf.beginPath();
     ctf.strokeStyle = 'dimgrey'
+    ctf.lineWidth= 2 * scaler;
+    ctf.beginPath();
     for (var i = 1*pi/16; i < 7*pi; i+=3*pi/4) {
         ctf.arc(fiddy,fiddy,330 * scaler, i, i + 3*pi/8)
         ctf.arc(fiddy,fiddy,345 * scaler, i + 3*pi/8, i + 3*pi/8*2)
@@ -90,9 +90,16 @@ function breathe() {
     }
     ctf.stroke()
 
+    ctf.lineWidth= 6 * scaler;
+    ctf.strokeStyle = '#444'
+    ctf.beginPath()
+    ctf.arc(fiddy,fiddy,347 * scaler, 0, 2*pi)
+    ctf.stroke()
+
     ctf.strokeStyle = 'rgb(0,' + Math.floor(outlineColor/2) +',' + outlineColor + ')'
+    ctf.lineWidth= 3 * scaler;
     outlineColor = outlineColor + colorStep
-    if (outlineColor > 0x70 || outlineColor < 0x30) {colorStep = colorStep * -0x1}
+    if (outlineColor > 0x90 || outlineColor < 0x50) {colorStep = colorStep * -0x1}
     for (var i = 0; i < 3; i+=2) {
         ctf.beginPath();
         for (var j = 0; j < points[i].length; j++) {
@@ -103,6 +110,7 @@ function breathe() {
         ctf.stroke()
     }
 
+    ctf.lineWidth= 2 * scaler;
     ctf.strokeStyle = '#ccc'
     ctf.fillStyle = '#fff'
     for (var i = 0; i < fieldX.length; i++) {
@@ -111,7 +119,7 @@ function breathe() {
         xPrime = (Math.cos(angle)*x + Math.sin(angle)*y + 350) * scaler
         yPrime = (-Math.sin(angle)*x + Math.cos(angle)*y + 350) * scaler
         ctf.beginPath()
-        if (Math.random() < 0.05) {
+        if (Math.random() < 0.1) {
             fieldTwinkle[i] = (fieldTwinkle[i]*3 + Math.random())/4
         }
         ctf.arc(xPrime, yPrime,fieldTwinkle[i] * scaler,0,2*pi)
@@ -132,19 +140,19 @@ function breathe() {
     car = Math.floor(carIndex)
     ctf.beginPath()
     var cc = 0xdd
-    for (var j = car; j < car + 8; j++) {
+    for (var j = car; j < car + 16; j++) {
         ctf.beginPath()
         ctf.strokeStyle = 'rgb(' + cc +',' + cc +',' + cc + ')'
-        cc = cc - 16
+        cc = cc - 7
         ctf.lineTo(points[12][j], points[13][j])
         ctf.lineTo(points[12][j + 1], points[13][j + 1])
         ctf.stroke()
     }
     cc = 0xdd
-    for (var j = car; j > car - 8; j--) {
+    for (var j = car; j > car - 16; j--) {
         ctf.beginPath()
         ctf.strokeStyle = 'rgb(' + cc +',' + cc +',' + cc + ')'
-        cc = cc - 16
+        cc = cc - 7
         ctf.lineTo(points[12][j], points[13][j])
         ctf.lineTo(points[12][j - 1], points[13][j - 1])
         ctf.stroke()
@@ -166,4 +174,4 @@ function breathe() {
     }
 }
 background()
-setInterval(breathe, 125)
+setInterval(breathe, 100)
