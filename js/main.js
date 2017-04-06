@@ -74,9 +74,9 @@ window.onresize = function() {background()}
 angle = Math.random()*2*pi
 function breathe() {
     ctf.clearRect(0, 0, cw, ch);
-    ctf.lineWidth=2 * scaler;
-    ctf.beginPath();
     ctf.strokeStyle = 'dimgrey'
+    ctf.lineWidth= 2 * scaler;
+    ctf.beginPath();
     for (var i = 1*pi/16; i < 7*pi; i+=3*pi/4) {
         ctf.arc(fiddy,fiddy,330 * scaler, i, i + 3*pi/8)
         ctf.arc(fiddy,fiddy,345 * scaler, i + 3*pi/8, i + 3*pi/8*2)
@@ -90,7 +90,20 @@ function breathe() {
     }
     ctf.stroke()
 
+    ctf.lineWidth= 6 * scaler;
+    ctf.strokeStyle = '#444'
+    ctf.beginPath()
+    ctf.arc(fiddy,fiddy,347 * scaler, 0, 2*pi)
+    ctf.stroke()    
+    for (var i = pi/16; i < 2*pi; i+=pi/8) {
+        ctf.beginPath()
+        ctf.lineWidth= 8 * scaler;
+        ctf.arc(fiddy,fiddy,ci*.8, i, i+=pi/8)
+        ctf.stroke()
+    }
+
     ctf.strokeStyle = 'rgb(0,' + Math.floor(outlineColor/2) +',' + outlineColor + ')'
+    ctf.lineWidth= 3 * scaler;
     outlineColor = outlineColor + colorStep
     if (outlineColor > 0x90 || outlineColor < 0x50) {colorStep = colorStep * -0x1}
     for (var i = 0; i < 3; i+=2) {
@@ -103,6 +116,7 @@ function breathe() {
         ctf.stroke()
     }
 
+    ctf.lineWidth= 2 * scaler;
     ctf.strokeStyle = '#ccc'
     ctf.fillStyle = '#fff'
     for (var i = 0; i < fieldX.length; i++) {
