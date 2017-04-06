@@ -111,7 +111,7 @@ function breathe() {
         xPrime = (Math.cos(angle)*x + Math.sin(angle)*y + 350) * scaler
         yPrime = (-Math.sin(angle)*x + Math.cos(angle)*y + 350) * scaler
         ctf.beginPath()
-        if (Math.random() < 0.05) {
+        if (Math.random() < 0.1) {
             fieldTwinkle[i] = (fieldTwinkle[i]*3 + Math.random())/4
         }
         ctf.arc(xPrime, yPrime,fieldTwinkle[i] * scaler,0,2*pi)
