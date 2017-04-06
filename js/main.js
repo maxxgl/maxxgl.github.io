@@ -94,13 +94,7 @@ function breathe() {
     ctf.strokeStyle = '#444'
     ctf.beginPath()
     ctf.arc(fiddy,fiddy,347 * scaler, 0, 2*pi)
-    ctf.stroke()    
-    for (var i = pi/16; i < 2*pi; i+=pi/8) {
-        ctf.beginPath()
-        ctf.lineWidth= 8 * scaler;
-        ctf.arc(fiddy,fiddy,ci*.8, i, i+=pi/8)
-        ctf.stroke()
-    }
+    ctf.stroke()
 
     ctf.strokeStyle = 'rgb(0,' + Math.floor(outlineColor/2) +',' + outlineColor + ')'
     ctf.lineWidth= 3 * scaler;
