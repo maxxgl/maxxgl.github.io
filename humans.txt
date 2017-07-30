@@ -7,9 +7,9 @@
 
 # THANKS
 
-    Everybody
+    TO YOU
 
 # TECHNOLOGY COLOPHON
 
     CSS3, HTML5
-    jQuery, PureCSS
+    jQuery, HTML5BoilerPlate
