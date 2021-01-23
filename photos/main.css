@@ -1,0 +1,64 @@
+html, body {
+  font-family: 'Yantramanav', sans-serif;
+  margin: 0;
+}
+
+main {
+  padding: 4em 2em;
+  grid-gap: 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 600px) {
+  main {
+    grid-gap: 8em;
+    grid-template-columns: 1fr;
+  }
+}
+
+header {
+  padding: 2em;
+  font-size: 1.25em;
+}
+
+#list-wrap {
+  border: 1px solid black;
+  padding: .5em
+}
+
+.image {
+  display: flex;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  height: 32px;
+  padding: 0 em;
+  text-align: center;
+  background-color: transparent;
+  border-radius: 6px;
+  border: 1px solid black;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: background-color .25s ease-in;
+  transition: border .25s ease-in;
+}
+
+button.active {
+  color: white;
+  background-color: black;
+}
+
+.controls {
+  padding-top: .5em;
+  text-align: center;
+}
+
+.break {
+  padding: 0 .5em;
+}
