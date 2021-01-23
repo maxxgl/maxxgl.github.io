@@ -33,7 +33,7 @@ const handleClick = (i, id) => {
 const markup = (tag, i) => `
   <div>
     <div class="image">
-      <img src="images/thumbnails/${tag[0]}">
+      <img src="images/thumbnails/${tag[0]}" loading="lazy">
     </div>
     <div class="controls">
       <a href="images/full-size/${tag[0]}">
