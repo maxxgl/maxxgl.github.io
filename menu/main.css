@@ -1,0 +1,49 @@
+html, body {
+  font-family: 'Yantramanav', sans-serif;
+  font-weight: 100;
+}
+
+.meal {
+  background-color: whitesmoke;
+  padding: .5em 1em;
+  margin-bottom: 1em;
+}
+
+.meal.legend {
+  padding: 0em 1em;
+  margin-bottom: .5em;
+}
+
+.meal > h2 {
+  font-weight: 100;
+  margin: 0;
+  border-bottom: 1px solid dimgray;
+  font-size: 18px;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 5em 7em 5em 5em;
+  padding: .25em;
+}
+
+.item > div:last-child,
+.item > div:nth-last-child(2) {
+  text-align: right;
+}
+
+.dots {
+  color: grey;
+}
+
+.details {
+  background-color: aliceblue;
+}
+
+.item.last {
+  border-top: 1px solid lightgray;
+}
+
+.total {
+  font-weight: bold;
+}
