@@ -76,7 +76,7 @@ var base = {
     mustard: new Ingredient("Mustard", 5, 0, 1, 'tsp'),
     pickle: new Ingredient("Pickle", 0, 0, 1),
     tortilla: new Ingredient("Tortilla", 210, 5, 1),
-    rice: new Ingredient("Rice", 210, 8, .75, 'cup'),
+    rice: new Ingredient("Rice", 210, 8, 0.75, 'cup'),
     brocolli: new Ingredient("Brocolli", 30, 3, 1, 'cup'),
     riceKrispie: new Ingredient("Rice Krispie", 90, 0, 1),
     rxBar: new Ingredient("RX Bar", 210, 12, 1),
@@ -91,7 +91,7 @@ var items = {
     eggSandwich: new MenuItem("Egg Sandwich", [
         [0.2, base.butter],
         [2, base.bread],
-        [1, base.egg],
+        [2, base.egg],
         [0.5, base.ham],
         [0.5, base.cheese],
         [1, base.ketchup]
@@ -117,7 +117,7 @@ var mealPlan = new MenuItem('Meal Plan', [
         [0.5, food.muffin],
     ], '08:30'),
     new MenuItem('Breakfast', [
-        [2, food.eggSandwich],
+        [1, food.eggSandwich],
         [1, food.oj],
     ], '10:30'),
     new MenuItem('Lunch', [[2, food.wrap]], "13:00"),

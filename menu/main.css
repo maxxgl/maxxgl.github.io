@@ -1,6 +1,7 @@
 html, body {
   font-family: 'Yantramanav', sans-serif;
   font-weight: 100;
+  margin-bottom: 3em;
 }
 
 .meal {
@@ -23,7 +24,7 @@ h2 {
 .item {
   display: grid;
   font-size: 14px;
-  grid-template-columns: 5em 7em 5em 5em;
+  grid-template-columns: 5em 1fr 5em 5em;
   padding: .25em;
 }
 
@@ -51,6 +52,10 @@ h2 {
 
 .details {
   background-color: aliceblue;
+}
+
+details summary::-webkit-details-marker {
+  display:none;
 }
 
 .total {
