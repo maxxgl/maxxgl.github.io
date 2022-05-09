@@ -14,17 +14,30 @@ html, body {
   margin-bottom: .5em;
 }
 
-.meal > h2 {
+h2 {
   font-weight: 100;
   margin: 0;
-  border-bottom: 1px solid dimgray;
   font-size: 18px;
 }
 
 .item {
   display: grid;
+  font-size: 14px;
   grid-template-columns: 5em 7em 5em 5em;
   padding: .25em;
+}
+
+.item.header {
+  border-bottom: 1px solid lightgray;
+}
+
+.item.header > div {
+  font-size: 16px;
+}
+
+.item.header > h2 {
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .item > div:last-child,
@@ -38,10 +51,6 @@ html, body {
 
 .details {
   background-color: aliceblue;
-}
-
-.item.last {
-  border-top: 1px solid lightgray;
 }
 
 .total {

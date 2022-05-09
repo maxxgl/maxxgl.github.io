@@ -32,8 +32,8 @@ class MenuItem extends Ingredient {
     let protein = 0;
 
     for (const item of recipe) {
-      calories += item[1].calories * item[0];
-      protein += item[1].protein * item[0];
+      calories += Math.round(item[1].calories * item[0]);
+      protein += Math.round(item[1].protein * item[0]);
     }
 
     super(name, calories, protein, 1);
@@ -60,7 +60,18 @@ const base = {
   ham: new Ingredient("Ham", 70, 9, 2, "oz"),
   cheese: new Ingredient("Cheese", 110, 7, 0.33, "cup"),
   ketchup: new Ingredient("Ketchup", 20, 0, 1, "tbsp"),
-  oj: new Ingredient("Orange Juice", 120, 2, 8, "oz")
+  oj: new Ingredient("Orange Juice", 120, 2, 8, "oz"),
+  chicken: new Ingredient("Chicken Tender", 100, 23, 4, 'oz'),
+  tomato: new Ingredient("Cherry Tomatoes", 50, 1, 1, 'cup'),
+  springMix: new Ingredient("Spring Mix", 20, 2, 2, 'cup'),
+  mustard: new Ingredient("Mustard", 5, 0, 1, 'tsp'),
+  pickle: new Ingredient("Pickle", 0, 0, 1),
+  tortilla: new Ingredient("Tortilla", 210, 5, 1),
+  rice: new Ingredient("Rice", 210, 8, .75, 'cup'),
+  brocolli: new Ingredient("Brocolli", 30, 3, 1, 'cup'),
+  riceKrispie: new Ingredient("Rice Krispie", 90, 0, 1),
+  rxBar: new Ingredient("RX Bar", 210, 12, 1),
+  apple: new Ingredient("Apple", 100, 0, 1),
 } as const;
 
 const items = {
@@ -70,13 +81,26 @@ const items = {
     [1, base.icecream]
   ]),
   eggSandwich: new MenuItem("Egg Sandwich", [
-    [0.25, base.butter],
+    [0.2, base.butter],
     [2, base.bread],
     [1, base.egg],
     [0.5, base.ham],
     [0.5, base.cheese],
     [1, base.ketchup]
-  ])
+  ]),
+  wrap: new MenuItem("Wrap", [
+    [1, base.tortilla],
+    [.8, base.chicken],
+    [1, base.mustard],
+    [1, base.springMix],
+    [.5, base.tomato],
+    [1, base.pickle],
+  ]),
+  slop: new MenuItem("Slop", [
+    [2, base.rice],
+    [1.5, base.chicken],
+    [2, base.brocolli],
+  ]),
 } as const;
 
 const food = { ...items, ...base };
@@ -84,12 +108,21 @@ const food = { ...items, ...base };
 const mealPlan = new MenuItem('Meal Plan', [
     new MenuItem('Pre-Run', [
       [1, food.smoothie],
-      [1, food.muffin],
+      [0.5, food.muffin],
     ], '08:30'),
     new MenuItem('Breakfast', [
-      [3, food.eggSandwich],
-      [2, food.oj],
+      [2, food.eggSandwich],
+      [1, food.oj],
     ], '10:30'),
+    new MenuItem('Lunch', [[2, food.wrap]], "13:00"),
+    new MenuItem('Dinner', [[1, food.slop]], '15:00'),
+    new MenuItem('Pre-BJJ', [[1, food.riceKrispie]], '17:30'),
+    new MenuItem('Post-BJJ', [
+      [1, food.rxBar],
+      [1, food.apple],
+    ], '19:30'),
+    new MenuItem('Supper', [[1, food.slop]], '20:00'),
+    new MenuItem('Midnight Snack', [[1, food.slop]], '23:00'),
   ].map(meal => [1, meal])
 );
 
@@ -113,8 +146,8 @@ const menuItemIngredients = (recipe: RecipeEntryList) => recipe.reduce<string>((
     <div class="item">
       <div>${curr[0] * curr[1].servingAmount} ${curr[1].servingUnit}</div>
       <div>${curr[1].name}</div>
-      <div>${curr[1].calories * curr[0]}</div>
-      <div>${curr[1].protein * curr[0]}</div>
+      <div>${Math.round(curr[1].calories * curr[0])}</div>
+      <div>${Math.round(curr[1].protein * curr[0])}</div>
     </div>
   `;
 }, ``);
@@ -142,8 +175,8 @@ for (const [q, meal] of mealPlan.ingredients) {
           <summary class="item">
             <div>${entry[0] * entry[1].servingAmount} ${entry[1].servingUnit}</div>
             <div>${name}<span class="dots">&nbsp;&bull;&bull;&bull;</span></div>
-            <div>${calories * entry[0]}</div>
-            <div>${protein * entry[0]}</div>
+            <div>${Math.round(calories * entry[0])}</div>
+            <div>${Math.round(protein * entry[0])}</div>
           </summary>
           <div class="details">
             ${details}
@@ -155,8 +188,8 @@ for (const [q, meal] of mealPlan.ingredients) {
         <div class="item">
           <div>${entry[0] * entry[1].servingAmount}${entry[1].servingUnit}</div>
           <div>${name}</div>
-          <div>${calories * entry[0]}</div>
-          <div>${protein * entry[0]}</div>
+          <div>${Math.round(calories * entry[0])}</div>
+          <div>${Math.round(protein * entry[0])}</div>
         </div>
       `;
     }
@@ -164,14 +197,12 @@ for (const [q, meal] of mealPlan.ingredients) {
 
   html.insertAdjacentHTML("beforeend", `
     <div class="meal">
-      <h2>${meal.name} <small>&nbsp;&nbsp;${meal.time}</small></h2>
-      ${contents}
-      <div class="item last">
-        <div><small>Subtotal</small></div>
-        <div></div>
+      <div class="item header">
+        <h2>${meal.name}<small><small>&nbsp;${meal.time}</small></small></h2>
         <div>${meal.calories}</div>
         <div>${meal.protein}</div>
       </div>
+      ${contents}
     </div>
   `);
 }
