@@ -83,7 +83,10 @@ var base = {
     apple: new Ingredient("Apple", 100, 0, 1),
     oatmealPie: new Ingredient("Oatmeal Creme Pie", 330, 3, 1),
     sanPellegrino: new Ingredient("San Pellegrino", 120, 0, 1),
-    spindrift: new Ingredient("Spindrift", 10, 0, 1)
+    spindrift: new Ingredient("Spindrift", 10, 0, 1),
+    banana: new Ingredient("Banana", 110, 1, 1),
+    thaiCurry: new Ingredient("Thai Curry", 450, 30, 1, 'cup'),
+    michelob: new Ingredient("Michelob Ultra", 90, 1, 1)
 };
 var items = {
     smoothie: new MenuItem("Smoothie", [
@@ -107,17 +110,25 @@ var items = {
         [.5, base.tomato],
         [1, base.pickle],
     ]),
-    slop: new MenuItem("Slop", [
+    chickenRice: new MenuItem("Rice and Chicken", [
         [2.4, base.rice],
         [1.5, base.chicken],
         [2, base.brocolli],
+    ]),
+    thaiCurryRice: new MenuItem("Thai Curry Rice", [
+        [1, base.rice],
+        [1, base.thaiCurry],
+    ]),
+    proteinIceCream: new MenuItem("Protein Ice Cream", [
+        [3, base.icecream],
+        [1, base.protein],
     ])
 };
 var food = __assign(__assign({}, items), base);
 var mealPlan = [
     new MenuItem('Meal Plan: 2022-05-10', [
         new MenuItem('Pre-Run', [
-            [1, food.rxBar],
+            [1, food.smoothie],
             [0.5, food.muffin],
         ], '08:30'),
         new MenuItem('Breakfast', [
@@ -128,17 +139,45 @@ var mealPlan = [
             [2, food.wrap],
             [1, food.spindrift],
         ], "13:00"),
-        new MenuItem('Dinner', [[1, food.slop]], '15:00'),
-        new MenuItem('Pre-BJJ', [[1, food.riceKrispie]], '17:30'),
+        new MenuItem('Dinner', [[1, food.thaiCurryRice]], '16:00'),
+        new MenuItem('Pre-BJJ', [[1, food.riceKrispie]], '16:00'),
         new MenuItem('Post-BJJ', [
+            [1, food.apple],
+            [1, food.rxBar],
+        ], '19:15'),
+        new MenuItem('Supper', [
+            [1, food.thaiCurryRice],
+            [1, food.sanPellegrino],
+        ], '20:30'),
+        new MenuItem('Midnight Snack', [
+        // casein/pbj
+        ], '23:00'),
+    ].map(function (meal) { return [1, meal]; })),
+    new MenuItem('Meal Plan: 2022-05-10', [
+        new MenuItem('Pre-Run', [
+            [1, food.banana],
+            [0.5, food.muffin],
+        ], '08:30'),
+        new MenuItem('Breakfast', [
+            [1, food.eggSandwich],
+            [1.25, food.oj],
+        ], '10:30'),
+        new MenuItem('Lunch', [
+            [1, new Ingredient("WhichWhich Philly", 520, 30, 1)],
+            [1, food.spindrift],
+        ], "13:00"),
+        new MenuItem('Dinner', [
             [1, food.smoothie],
             [1, food.apple],
+        ], '15:00'),
+        new MenuItem('Post-BJJ', [
+            [1, food.riceKrispie],
         ], '19:30'),
         new MenuItem('Supper', [
-            [1, food.slop],
-            [1, food.sanPellegrino],
+            [1.5, food.thaiCurry],
+            [1, food.michelob],
         ], '20:00'),
-        new MenuItem('Midnight Snack', [[1, food.slop]], '23:00'),
+        new MenuItem('Midnight Snack', [[1, food.proteinIceCream]], '23:00'),
     ].map(function (meal) { return [1, meal]; })),
     new MenuItem('Meal Plan: 2022-05-09', [
         new MenuItem('Pre-Run', [
@@ -153,12 +192,12 @@ var mealPlan = [
             [2, food.wrap],
             [1, food.spindrift],
         ], "13:30"),
-        new MenuItem('Dinner', [[1, food.slop]], '16:00'),
+        new MenuItem('Dinner', [[1, food.chickenRice]], '16:00'),
         new MenuItem('Post-BJJ', [
             [1, food.oatmealPie],
         ], '19:15'),
         new MenuItem('Supper', [
-            [1, food.slop],
+            [1, food.chickenRice],
             [1, food.sanPellegrino],
         ], '20:30'),
         new MenuItem('Midnight Snack', [
