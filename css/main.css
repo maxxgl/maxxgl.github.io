@@ -76,16 +76,12 @@ body {
   /* background: linear-gradient(to bottom right, cyan, magenta, yellow); */
 }
 
-@media (min-width: 901px) {
-  h1 {
-    margin-top: 0px;
-  }
+#canvas {
+  cursor: grab;
 }
 
-@media (max-width: 900px) {
-}
-
-@media (max-width: 500px) {
+#canvas:active {
+  cursor: grabbing;
 }
 
 #info {
@@ -93,6 +89,16 @@ body {
   align-self: center;
   justify-self: end;
   max-width: 40ch;
+}
+
+@media (max-aspect-ratio: 5/4) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 25% 1fr;
+  }
+  #info {
+    justify-self: center;
+  }
 }
 
 .text {
